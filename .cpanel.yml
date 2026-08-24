@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/kaizpwij/public_html/
+    - /bin/cp -R about.html $DEPLOYPATH
+    - /bin/cp -R contact.html $DEPLOYPATH
+    - /bin/cp -R home.html $DEPLOYPATH
+    - /bin/cp -R work.html $DEPLOYPATH
+    - /bin/cp -R *.webp $DEPLOYPATH
+    - /bin/cp -R *.png $DEPLOYPATH
+    - /bin/cp -R *.jpg $DEPLOYPATH
+    - /bin/cp -R *.txt $DEPLOYPATH
+    - /bin/cp -R *.xml $DEPLOYPATH
