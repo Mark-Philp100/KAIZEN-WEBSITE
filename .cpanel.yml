@@ -15,4 +15,4 @@ deployment:
     - /bin/cp *.jpg $DEPLOYPATH
 
     # NEW LINE
-    - /bin/cp -R invitations $DEPLOYPATH
+    - /bin/cp -R Invitations $DEPLOYPATH
