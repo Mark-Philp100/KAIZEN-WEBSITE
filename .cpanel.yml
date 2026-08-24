@@ -14,5 +14,5 @@ deployment:
     - /bin/cp *.png $DEPLOYPATH
     - /bin/cp *.jpg $DEPLOYPATH
 
-    # NEW LINE
-    - /bin/cp -R invitations $DEPLOYPATH
+    # Invitations website
+    - /bin/cp -R Invitations $DEPLOYPATH
