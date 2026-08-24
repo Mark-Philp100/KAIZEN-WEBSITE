@@ -2,12 +2,17 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kaizpwij/public_html/
+
     - /bin/cp about.html $DEPLOYPATH
     - /bin/cp contact.html $DEPLOYPATH
     - /bin/cp home.html $DEPLOYPATH
     - /bin/cp work.html $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
+
     - /bin/cp *.webp $DEPLOYPATH
     - /bin/cp *.png $DEPLOYPATH
     - /bin/cp *.jpg $DEPLOYPATH
+
+    # NEW LINE
+    - /bin/cp -R invitations $DEPLOYPATH
