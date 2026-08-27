@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#ffffff">
 
   <title>RUSHERE MARATHON</title>
-<link rel="icon" type="image/png" href="Newfavicon.PNG">
+  <link rel="icon" type="image/png" href="./Newfavicon.PNG?v=2">
+  <link rel="shortcut icon" type="image/png" href="./Newfavicon.PNG?v=2">
+  <link rel="apple-touch-icon" href="./Newfavicon.PNG?v=2">
   <meta name="description" content="Private invitation to the CNC consecration and investiture service.">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -2568,7 +2570,7 @@
       transition: background-color .35s ease;
     }
 
-    .route-map-display[data-distance="5"] { background-color: #006a39; }
+    .route-map-display[data-distance="5"] { background-color: #47b24a; }
     .route-map-display[data-distance="10"] { background-color: #006a39; }
     .route-map-display[data-distance="21"] { background-color: #006582; }
     .route-map-display[data-distance="42"] { background-color: #082314; }
@@ -3203,6 +3205,52 @@
       }
     }
 
+    /* Keep the selected route button in sync with the map preview color. */
+    html body #routeDistance[data-distance="5"] {
+      --selected-route-color: #47b24a;
+    }
+
+    html body #routeDistance[data-distance="10"] {
+      --selected-route-color: #006a39;
+    }
+
+    html body #routeDistance[data-distance="21"] {
+      --selected-route-color: #006582;
+    }
+
+    html body #routeDistance[data-distance="42"] {
+      --selected-route-color: #082314;
+    }
+
+    html body #routeDistance[data-distance] {
+      color: #e5eedf !important;
+      background-color: var(--selected-route-color) !important;
+      border-color: var(--selected-route-color) !important;
+      background-image:
+        linear-gradient(45deg, transparent 50%, #e5eedf 50%),
+        linear-gradient(135deg, #e5eedf 50%, transparent 50%);
+      transition: background-color .35s ease, border-color .35s ease;
+    }
+
+    @media (hover: hover) {
+      html body #routeDistance[data-distance]:hover {
+        background-color: var(--selected-route-color) !important;
+        border-color: var(--selected-route-color) !important;
+      }
+    }
+
+    html body #routeDistance[data-distance]:focus,
+    html body #routeDistance[data-distance]:focus-visible {
+      background-color: var(--selected-route-color) !important;
+      border-color: var(--selected-route-color) !important;
+    }
+
+    @supports selector(select:open) {
+      html body #routeDistance[data-distance]:open {
+        background-color: var(--selected-route-color) !important;
+        border-color: var(--selected-route-color) !important;
+      }
+    }
   </style>
   <!-- Mobile-first implementation notes: ./mobile.md -->
 </head>
@@ -3849,6 +3897,7 @@
 
       routeMapCurrent.textContent = `${distance.replace(/\s+/g, "")} Route Map`;
       routeMapDisplay.dataset.distance = selectedRoute.value;
+      routeDistance.dataset.distance = selectedRoute.value;
       routeMapCurrent.style.setProperty("color", "#e5eedf", "important");
       routeMapDisplay.querySelectorAll(".route-map-placeholder p").forEach((line) => {
         line.style.setProperty("color", "#e5eedf", "important");
