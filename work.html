@@ -113,6 +113,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         color: #34482B;
       }
 
+      .lets-talk-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        overflow: hidden;
+      }
+
+      .lets-talk-button .button-arrow {
+        width: 0;
+        opacity: 0;
+        transform: translateX(-12px);
+        transition: width 0.35s ease, margin-left 0.35s ease, opacity 0.25s ease, transform 0.35s ease;
+      }
+
+      .lets-talk-button:hover .button-arrow,
+      .lets-talk-button:focus-visible .button-arrow {
+        width: 20px;
+        margin-left: 10px;
+        opacity: 1;
+        transform: translateX(0);
+      }
+
       .zoom-hover,
       .hero-tilt {
         --rotation: -1.5deg;
@@ -1086,7 +1109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             box-sizing: border-box;
           "
         >
-          <h3 style="margin: 0 0 28px; font-size: clamp(42px, 10vw, 75px); line-height: 0.92; font-weight: 800; text-transform: uppercase; letter-spacing: -0.04em; color: #080F05;">Intersection of <span style="color: #34482B; font-style: italic">Culture</span> & <span style="color: #34482B;">Creativity</span></h3>
+          <h3 style="margin: 0 0 28px; font-size: clamp(42px, 10vw, 75px); line-height: 0.92; font-weight: 800; text-transform: uppercase; letter-spacing: -0.04em; color: #080F05;">Intersection of <span style="color: #34482B; font-style: italic">Culture</span> & <span style="color: #34482B; font-style: italic">Creativity</span></h3>
           <p style="margin: 0 0 50px; font-family: Montserrat, sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.20em; text-transform: uppercase; color: #34482B;">Our Clients</p>
           <div style="width: 100%; overflow: hidden; box-sizing: border-box">
             <div class="partner-track" style="display: flex; align-items: center; gap: 64px; width: max-content; white-space: nowrap; padding: 18px 0;">
@@ -1111,7 +1134,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div style="max-width: 1000px; margin: 0 auto; box-sizing: border-box">
           <h4 style="margin: 0 0 24px; font-size: clamp(28px, 10vw, 68px); line-height: 1.02; font-weight: 800; text-transform: uppercase; color: #080F05; overflow-wrap: anywhere;">Let's Create Something Extraordinary!</h4>
           <p style="margin: 0 auto 36px; max-width: 640px; font-size: 16px; line-height: 1.7; color: #34482B;">If your brand needs sharper storytelling, stronger visual systems, or a more immersive public presence, the next conversation should start here.</p>
-          <a class="cta-link" href="contact.html" style="display: inline-flex; align-items: center; gap: 14px; text-decoration: none; color: #34482B; font-size: clamp(28px, 5vw, 52px); line-height: 1; font-weight: 800; text-transform: uppercase; transition: color 0.3s ease, gap 0.3s ease, transform 0.15s ease;"><span style="border-bottom: 4px solid #34482B; padding-bottom: 8px; display: inline-block;">Let's Talk</span><span class="material-symbols-outlined" style="font-size: 42px">arrow_forward</span></a>
+          <button
+            class="lets-talk-button"
+            onclick="window.location.href='contact.html'"
+            onmouseout="this.style.background = 'transparent'; this.style.color = '#000'; this.style.borderColor = '#435334';"
+            onmouseover="this.style.background = '#435334'; this.style.color = '#efe6dc'; this.style.borderColor = '#435334';"
+            style="padding: 14px 32px; font-family: Montserrat, sans-serif; font-size: clamp(0.9rem, 1.8vw, 1.1rem); border: 1px solid #435334; border-radius: 50px; background: transparent; color: #000; cursor: pointer; transition: background 0.3s, color 0.3s; box-sizing: border-box; text-transform: uppercase;"
+            type="button"
+          >
+            <span>Let's Talk</span>
+            <span class="button-arrow material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </button>
         </div>
       </section>
     </main>
@@ -1263,7 +1296,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style="
               margin: 0;
               text-align: center;
-              transform: translateX(-45px);
+              transform: translateX(-85px);
               font-family: Montserrat, sans-serif;
               font-size: 14px;
               font-weight: 800;

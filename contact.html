@@ -99,6 +99,65 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				color: #34482b;
 			}
 
+			.send-button {
+				position: relative;
+				overflow: hidden;
+			}
+
+			.send-button::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 45%;
+				height: 3px;
+				background: #34482b;
+				opacity: 0;
+				transform: translateX(-110%);
+			}
+
+			.send-button.is-loading::after {
+				opacity: 1;
+				animation: send-progress 1.1s ease-in-out infinite;
+			}
+
+			.send-button.is-loading {
+				cursor: wait;
+			}
+
+			.bottom-fill-button {
+				position: relative;
+				isolation: isolate;
+				overflow: hidden;
+				transition: color 0.35s ease, border-color 0.35s ease, transform 0.15s ease !important;
+			}
+
+			.bottom-fill-button::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: -1;
+				background: #f1f1f1;
+				transform: scaleY(0);
+				transform-origin: bottom;
+				transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+			}
+
+			.bottom-fill-button:hover::before,
+			.bottom-fill-button:focus-visible::before {
+				transform: scaleY(1);
+			}
+
+			.bottom-fill-button:hover,
+			.bottom-fill-button:focus-visible {
+				color: #34482b !important;
+				border-color: #f1f1f1 !important;
+			}
+
+			@keyframes send-progress {
+				to { transform: translateX(245%); }
+			}
+
 			.site-header.menu-open .nav-list {
 				display: flex;
 				opacity: 1;
@@ -1085,7 +1144,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 								<div style="padding-top: 8px">
 									<button
-										class="cta-button"
+										class="cta-button send-button"
 										type="submit"
 										style="
 											width: 100%;
@@ -1106,7 +1165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										onmouseover="this.style.filter='brightness(1.05)'"
 										onmouseout="this.style.filter='brightness(1)'"
 									>
-										Send
+										<span class="send-button-label">Send</span>
 									</button>
 								</div>
 							</form>
@@ -1134,7 +1193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					</p>
 					<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
 						<button
-							class="cta-button"
+							class="cta-button bottom-fill-button"
 							style="
 								border: 1px solid #f1f1f1;
 								background: transparent;
@@ -1150,10 +1209,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								transition: all 0.2s ease;
 							"
 							onclick="window.location.href='work.html'"
-							onmouseover="this.style.background='#f1f1f1'; this.style.color='#34482b'"
-							onmouseout="this.style.background='transparent'; this.style.color='#f1f1f1'"
 						>
-						Our Work
+						<span>Our Work</span>
 						</button>
 					</div>
 				</div>
@@ -1237,7 +1294,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						style="
 							margin: 0;
 							text-align: center;
-							transform: translateX(-45px);
+							transform: translateX(-85px);
 							font-family: Montserrat, sans-serif;
 							font-size: 14px;
 							font-weight: 800;
@@ -1478,7 +1535,10 @@ Postal Code: 122268.
 				var submitButton = form.querySelector("button[type='submit']");
 				if (submitButton) {
 					submitButton.disabled = true;
-					submitButton.style.opacity = "0.75";
+					submitButton.classList.add("is-loading");
+					submitButton.setAttribute("aria-busy", "true");
+					var submitLabel = submitButton.querySelector(".send-button-label");
+					if (submitLabel) submitLabel.textContent = "Sending...";
 				}
 
 				var formData = new FormData(form);
@@ -1502,7 +1562,10 @@ Postal Code: 122268.
 					.finally(function () {
 						if (submitButton) {
 							submitButton.disabled = false;
-							submitButton.style.opacity = "1";
+							submitButton.classList.remove("is-loading");
+							submitButton.removeAttribute("aria-busy");
+							var submitLabel = submitButton.querySelector(".send-button-label");
+							if (submitLabel) submitLabel.textContent = "Send";
 						}
 					});
 			}
