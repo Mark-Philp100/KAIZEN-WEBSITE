@@ -384,18 +384,14 @@
 
       0%,
       100% {
-
         opacity: .25;
-
         transform:
           translateY(-3px)
           rotate(45deg);
       }
 
       50% {
-
         opacity: 1;
-
         transform:
           translateY(4px)
           rotate(45deg);
@@ -429,11 +425,8 @@
       color:
         #7d5b00 !important;
     }
-
-
     .invitation,
     .invitation * {
-
       color:
         #7d5b00 !important;
     }
@@ -783,16 +776,12 @@
       text-shadow:
         0 0 18px rgba(111, 23, 45, .28);
     }
-
     .countdown.is-today .time-box {
-
       display: none;
     }
 
     .countdown.is-today .countdown-today {
-
       display: block;
-
       animation:
         today-pulse 1.6s ease-in-out infinite;
     }
@@ -801,37 +790,26 @@
 
       0%,
       100% {
-
         opacity: .82;
-
         transform: scale(.96);
       }
 
       50% {
-
         opacity: 1;
-
         transform: scale(1.06);
-
         text-shadow:
           0 0 28px rgba(111, 23, 45, .5);
       }
     }
 
-
     .time-box {
-
       padding:
         20px 5px;
     }
 
-
     .time-box strong {
-
       display: block;
-
       color: var(--wine);
-
       font:
         500
         clamp(1.8rem, 6vw, 3rem)/1
@@ -1280,15 +1258,11 @@
 
 
     @media (hover: hover) {
-
       .rsvp-option:hover {
-
         background:
           rgba(185,148,85,.08);
       }
-
     }
-
 
     .rsvp-option:has(input:checked) {
 
@@ -2570,10 +2544,10 @@
       transition: background-color .35s ease;
     }
 
-    .route-map-display[data-distance="5"] { background-color: #47b24a; }
-    .route-map-display[data-distance="10"] { background-color: #006a39; }
-    .route-map-display[data-distance="21"] { background-color: #006582; }
-    .route-map-display[data-distance="42"] { background-color: #082314; }
+    .route-map-display[data-distance="5"] { background-color: #00B436; }
+    .route-map-display[data-distance="10"] { background-color: #E2CC00; }
+    .route-map-display[data-distance="21"] { background-color: #0074AD; }
+    .route-map-display[data-distance="42"] { background-color: #B21900; }
 
     .route-map-display[data-distance] .route-map-placeholder,
     .route-map-display[data-distance] .route-map-placeholder * {
@@ -3207,19 +3181,19 @@
 
     /* Keep the selected route button in sync with the map preview color. */
     html body #routeDistance[data-distance="5"] {
-      --selected-route-color: #47b24a;
+      --selected-route-color: #00B436;
     }
 
     html body #routeDistance[data-distance="10"] {
-      --selected-route-color: #006a39;
+      --selected-route-color: #E2CC00;
     }
 
     html body #routeDistance[data-distance="21"] {
-      --selected-route-color: #006582;
+      --selected-route-color: #0074AD;
     }
 
     html body #routeDistance[data-distance="42"] {
-      --selected-route-color: #082314;
+      --selected-route-color: #B21900;
     }
 
     html body #routeDistance[data-distance] {
