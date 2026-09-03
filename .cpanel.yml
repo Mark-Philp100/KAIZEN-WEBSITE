@@ -9,6 +9,7 @@ deployment:
     - /bin/cp work.html $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
+    - /bin/cp llms.txt $DEPLOYPATH
 
     - /bin/cp *.webp $DEPLOYPATH
     - /bin/cp *.png $DEPLOYPATH
