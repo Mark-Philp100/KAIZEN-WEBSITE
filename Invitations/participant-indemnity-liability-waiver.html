@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e5eedf">
+
+  <title>Indemnity, Waiver &amp; Participant Declaration | Rushere Marathon</title>
+  <meta name="description" content="Rushere Marathon indemnity, waiver and participant declaration.">
+  <link rel="icon" type="image/png" href="./Newfavicon.PNG?v=2">
+  <link rel="shortcut icon" type="image/png" href="./Newfavicon.PNG?v=2">
+  <link rel="apple-touch-icon" href="./Newfavicon.PNG?v=2">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #082314;
+      --green: #006a39;
+      --page-background: #e5eedf;
+      --surface: #f1f1f1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--page-background);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background: var(--page-background);
+      font-family: Montserrat, Arial, sans-serif;
+    }
+
+    .paper-scroll {
+      width: min(100%, 720px);
+      margin: 0 auto;
+      padding: clamp(42px, 8vw, 80px) clamp(20px, 6vw, 54px) clamp(52px, 9vw, 90px);
+    }
+
+    .waiver-header {
+      margin-bottom: clamp(34px, 6vw, 54px);
+      text-align: center;
+    }
+
+    .waiver-kicker {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: clamp(.8rem, 2vw, .95rem);
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--green);
+      font-size: clamp(1.75rem, 5vw, 2.85rem);
+      font-weight: 600;
+      letter-spacing: -.025em;
+      line-height: 1.08;
+      text-transform: uppercase;
+    }
+
+    .waiver-scope {
+      margin: 18px auto 0;
+      max-width: 58ch;
+      color: var(--green);
+      font-size: .9rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .waiver-intro {
+      margin: 18px auto 0;
+      max-width: 62ch;
+      font-size: .98rem;
+      line-height: 1.75;
+    }
+
+    .waiver-list {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+
+    .waiver-list > li {
+      margin-bottom: 30px;
+      padding-left: 7px;
+    }
+
+    .waiver-list > li::marker {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .waiver-list h2 {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .waiver-list p {
+      margin: 0 0 12px;
+      font-size: .94rem;
+      line-height: 1.75;
+    }
+
+    .waiver-list p:last-child {
+      margin-bottom: 0;
+    }
+
+    .action {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 24px;
+      border: 1px solid var(--green);
+      border-radius: 999px;
+      color: var(--green);
+      background: var(--surface);
+      font-size: .69rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color .25s ease, background-color .25s ease, transform .25s ease;
+    }
+
+    .action:focus-visible {
+      outline: 3px solid rgba(0, 106, 57, .3);
+      outline-offset: 4px;
+    }
+
+    .page-footer {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      background: var(--page-background);
+    }
+
+    .page-footer-artwork {
+      position: relative;
+      display: grid;
+      place-items: end center;
+      width: 100%;
+      min-height: clamp(520px, 100svh, 1050px);
+      padding: 0 clamp(20px, 8vw, 120px) clamp(34px, 6vh, 64px);
+      background: var(--page-background) url("./background.png") center / cover no-repeat;
+    }
+
+    .page-footer-signature {
+      margin: 0;
+      color: #e5eedf;
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      line-height: 1.5;
+      text-align: center;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+    }
+
+    @media (hover: hover) {
+      .action:hover {
+        color: #e5eedf;
+        background: var(--green);
+        transform: translateY(-3px);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .paper-scroll {
+        padding-inline: 22px;
+      }
+
+      .waiver-list {
+        padding-left: 1.25rem;
+      }
+
+      .page-footer-artwork {
+        min-height: 0;
+        aspect-ratio: 736 / 610;
+        padding: 0 20px 46px;
+        background-position: center bottom;
+        background-size: 100% auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .action {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="paper-scroll">
+    <header class="waiver-header">
+      <p class="waiver-kicker">Rushere Marathon</p>
+      <h1>Indemnity, Waiver &amp; Participant Declaration</h1>
+      <p class="waiver-scope">
+        This declaration applies to persons registering for and/or participating in the Rushere Marathon.
+      </p>
+      <p class="waiver-intro">
+        By registering for and/or participating in the Rushere Marathon (“the Event”), I acknowledge, understand and agree to the following:
+      </p>
+    </header>
+
+    <ol class="waiver-list">
+      <li>
+        <h2>Voluntary Participation and Assumption of Risk</h2>
+        <p>I acknowledge that participation in running, walking and other activities associated with the Event is voluntary and involves inherent risks.</p>
+        <p>These risks may include, but are not limited to, physical exhaustion, dehydration, falls, collisions, adverse weather conditions, road and traffic hazards, uneven surfaces, illness, injury, disability, loss or damage to personal property and, in exceptional circumstances, serious injury or death.</p>
+        <p>I freely and voluntarily accept and assume the risks associated with my participation in the Event.</p>
+      </li>
+
+      <li>
+        <h2>Fitness and Medical Condition</h2>
+        <p>I confirm that I am physically fit and sufficiently prepared to participate in the race distance for which I have registered.</p>
+        <p>I understand that it is my responsibility to assess my health and fitness before participating and to seek appropriate medical advice where necessary.</p>
+        <p>I agree not to participate if I am aware of any medical or physical condition that would make my participation unsafe.</p>
+      </li>
+
+      <li>
+        <h2>Personal Responsibility</h2>
+        <p>I accept responsibility for my own health, safety and conduct during the Event.</p>
+        <p>I agree to exercise reasonable care, remain aware of my surroundings and comply with all reasonable instructions issued by Event officials, marshals, medical personnel, security personnel and other authorised representatives of the Event.</p>
+        <p>I understand that failure to comply with safety instructions may result in my withdrawal or disqualification from the Event.</p>
+      </li>
+
+      <li>
+        <h2>Release and Waiver of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, I release and discharge the Event organisers, sponsors, partners, officials, volunteers, service providers, contractors and their respective representatives from claims arising from injury, illness, loss, damage or other harm suffered in connection with my voluntary participation in the Event, except to the extent that liability cannot lawfully be excluded or limited.</p>
+        <p>I acknowledge that I participate in the Event at my own risk.</p>
+      </li>
+
+      <li>
+        <h2>Indemnity</h2>
+        <p>To the fullest extent permitted by applicable law, I agree to indemnify and hold harmless the Event organisers and their respective officials, employees, volunteers, contractors, sponsors and partners against claims, losses, damages, liabilities or expenses arising from my own negligent, reckless or unlawful conduct, my failure to comply with Event rules or instructions, or my breach of this declaration.</p>
+      </li>
+
+      <li>
+        <h2>Medical Treatment and Emergencies</h2>
+        <p>If I require medical assistance during the Event, I consent to receiving reasonable first aid, emergency medical assistance and, where considered necessary, transportation to an appropriate medical facility.</p>
+        <p>I acknowledge that Event organisers cannot guarantee that medical intervention will prevent injury, illness or other adverse outcomes.</p>
+      </li>
+
+      <li>
+        <h2>Roads, Traffic and Course Conditions</h2>
+        <p>I acknowledge that portions of the Event may take place on or near public roads and other areas where vehicles, pedestrians, animals or other hazards may be present.</p>
+        <p>I agree to follow designated routes, road-safety measures, marshal instructions and any directions issued by police, security or Event officials.</p>
+      </li>
+
+      <li>
+        <h2>Personal Property</h2>
+        <p>I am responsible for my personal belongings during the Event.</p>
+        <p>To the fullest extent permitted by applicable law, the Event organisers shall not be responsible for the loss, theft or damage of personal property brought to or used during the Event.</p>
+      </li>
+
+      <li>
+        <h2>Participants Under 18 Years</h2>
+        <p>Where a participant is under 18 years of age, their participation should be with the knowledge and consent of a parent or legal guardian.</p>
+        <p>The parent or legal guardian is responsible for considering the minor’s ability, health and fitness to participate in the Event, subject to applicable law.</p>
+      </li>
+
+      <li>
+        <h2>Event Rules</h2>
+        <p>I agree to comply with the Event rules, safety requirements, course instructions and any reasonable directions communicated by the Event organisers before or during the Event.</p>
+        <p>I understand that the organisers may withdraw a participant from the Event where they reasonably consider continued participation to present a safety risk to the participant or others.</p>
+      </li>
+
+      <li>
+        <h2>Insurance</h2>
+        <p>I understand that I am responsible for determining whether I require personal accident, medical, travel or other insurance relating to my participation in the Event.</p>
+      </li>
+
+      <li>
+        <h2>Participant Declaration</h2>
+        <p>By registering for and/or participating in the Rushere Marathon, I confirm that I have read and understood this Indemnity, Waiver &amp; Participant Declaration, understand the risks associated with participating in a road-running event, am participating voluntarily, and agree to comply with the applicable Event rules and safety requirements.</p>
+      </li>
+    </ol>
+
+    <div class="waiver-header">
+      <a class="action" href="index.html">Back to Event Page</a>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-artwork" role="img" aria-label="Rushere Marathon course illustration">
+      <p class="page-footer-signature">DESIGN BY KAIZEN</p>
+    </div>
+  </footer>
+</body>
+</html>
