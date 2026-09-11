@@ -2675,14 +2675,6 @@
       color: #e5eedf !important;
     }
 
-    #photosPopup .route-map-viewer-title {
-      color: #006a39 !important;
-    }
-
-    #photosPopup .route-map-back {
-      color: #e5eedf !important;
-    }
-
     /* Accommodation selector and photo carousel. */
     .panel.accommodation-panel {
       min-height: 0 !important;
@@ -3599,16 +3591,6 @@ gtag('config', 'G-TTNT13X4R1');
     COMING SOON
   </div>
 
-  <div class="route-map-viewer" id="photosPopup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="photosPopupTitle">
-    <div class="route-map-dialog">
-      <div class="route-map-toolbar">
-        <h2 class="route-map-viewer-title" id="photosPopupTitle">Event Photos</h2>
-        <button class="route-map-back" id="photosPopupBack" type="button" aria-label="Close photos popup"></button>
-      </div>
-      <p class="route-map-message">Photos will appear on the event day</p>
-    </div>
-  </div>
-
   <!-- =======================================================
        PAGE FOOTER
   ======================================================== -->
@@ -4062,29 +4044,6 @@ gtag('config', 'G-TTNT13X4R1');
     accommodationPrevious.addEventListener("click", () => changeAccommodationPhoto(-1));
     accommodationNext.addEventListener("click", () => changeAccommodationPhoto(1));
     updateAccommodation();
-
-    const accessPhotos = document.getElementById("accessPhotos");
-    const photosPopup = document.getElementById("photosPopup");
-    const photosPopupBack = document.getElementById("photosPopupBack");
-
-    function closePhotosPopup() {
-      photosPopup.classList.remove("is-open");
-      photosPopup.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-      accessPhotos.focus();
-    }
-
-    accessPhotos.addEventListener("click", (event) => {
-      event.preventDefault();
-      photosPopup.classList.add("is-open");
-      photosPopup.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      photosPopupBack.focus();
-    });
-
-    photosPopupBack.addEventListener("click", closePhotosPopup);
-    photosPopup.addEventListener("click", (event) => { if (event.target === photosPopup) closePhotosPopup(); });
-    document.addEventListener("keydown", (event) => { if (event.key === "Escape" && photosPopup.classList.contains("is-open")) closePhotosPopup(); });
 
     /* Hero transition replicated from helpNYAKAJU.html. */
     const heroSources = ["./one.jpg", "./two.jpg", "./three.jpg", "./four.jpg"];
