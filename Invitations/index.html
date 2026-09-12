@@ -2286,7 +2286,7 @@
     }
 
     /* Montserrat everywhere except the branded hero title. */
-    body *:not(.hero-title):not(.hero-title *):not(.thank-you-title):not(.thank-you-title *):not(.next-marathon-date):not(.next-marathon-date *) {
+    body *:not(.hero-title):not(.hero-title *):not(.thank-you-title):not(.thank-you-title *) {
       font-family: Montserrat, Arial, sans-serif !important;
       font-weight: 400 !important;
     }
@@ -3284,33 +3284,25 @@
     }
 
     .next-marathon-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
       margin: 0;
-      padding: .72em 1.2em;
-      border: 1px solid rgba(0, 106, 57, .32);
-      border-radius: 999px;
       color: #006a39 !important;
-      background: rgba(255, 255, 255, .34) !important;
-      font: 600 clamp(.72rem, 1.6vw, .95rem)/1.25 Montserrat, Arial, sans-serif !important;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      animation: next-marathon-pulse 2.6s ease-in-out infinite;
+    }
+
+    .next-marathon-label {
+      color: inherit !important;
+      font-size: clamp(1.45rem, 5vw, 2rem);
+      line-height: 1;
     }
 
     .next-marathon-date time {
       color: inherit !important;
-      font: inherit !important;
+      font-size: clamp(1.05rem, 3vw, 1.2rem);
+      line-height: 1.25;
       white-space: nowrap;
-    }
-
-    @keyframes next-marathon-pulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(0, 106, 57, 0);
-      }
-      50% {
-        transform: scale(1.025);
-        box-shadow: 0 0 0 7px rgba(0, 106, 57, .08);
-      }
     }
 
     .thank-you-confetti {
@@ -3349,8 +3341,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .confetti-piece,
-      .next-marathon-date {
+      .confetti-piece {
         animation: none;
       }
     }
@@ -3450,7 +3441,10 @@ gtag('config', 'G-TTNT13X4R1');
       </section>
 
       <section class="next-marathon-section" aria-label="Next marathon date">
-        <p class="next-marathon-date">Next marathon: <time datetime="2027-06-25">26th June 2027</time></p>
+        <p class="next-marathon-date">
+          <span class="next-marathon-label">Next Marathon</span>
+          <time datetime="2027-06-26">26th June 2027</time>
+        </p>
       </section>
 
       <section class="panel photos-access-panel" aria-labelledby="photosAccessTitle">
