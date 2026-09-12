@@ -2286,7 +2286,7 @@
     }
 
     /* Montserrat everywhere except the branded hero title. */
-    body *:not(.hero-title):not(.hero-title *):not(.thank-you-title):not(.thank-you-title *) {
+    body *:not(.hero-title):not(.hero-title *):not(.thank-you-title):not(.thank-you-title *):not(.next-marathon-date):not(.next-marathon-date *) {
       font-family: Montserrat, Arial, sans-serif !important;
       font-weight: 400 !important;
     }
@@ -2523,7 +2523,7 @@
     }
 
     /* Final site color palette. */
-    html body *:not(.hero-title):not(.hero-title *):not(.thank-you-title):not(.thank-you-title *):not(.page-one-scroll-cue):not(.page-one-scroll-cue *):not(.route-map-message):not(.route-map-message *):not(.page-footer-signature):not(.page-footer-signature *):not(.accommodation-panel):not(.accommodation-panel *):not(.prize-money-panel):not(.prize-money-panel *):not(.registration-block):not(.registration-block *):not(.map-upload-toast):not(button):not(.action):not(.route-map-action):not(.route-map-back):not(.route-distance-select):not(.route-download-button):not(.photos-access-button) {
+    html body *:not(.hero-title):not(.hero-title *):not(.thank-you-title):not(.thank-you-title *):not(.next-marathon-date):not(.next-marathon-date *):not(.page-one-scroll-cue):not(.page-one-scroll-cue *):not(.route-map-message):not(.route-map-message *):not(.page-footer-signature):not(.page-footer-signature *):not(.accommodation-panel):not(.accommodation-panel *):not(.prize-money-panel):not(.prize-money-panel *):not(.registration-block):not(.registration-block *):not(.map-upload-toast):not(button):not(.action):not(.route-map-action):not(.route-map-back):not(.route-distance-select):not(.route-download-button):not(.photos-access-button) {
       color: #082314 !important;
     }
 
@@ -3239,17 +3239,29 @@
       isolation: isolate;
     }
 
-    .thank-you-title {
+    .thank-you-content {
       position: relative;
       z-index: 2;
+      display: flex;
+      width: 100%;
+      min-width: 0;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .thank-you-title {
+      position: relative;
       display: block;
+      max-width: 100%;
       margin: 0;
       color: #00b637 !important;
       font-family: Anton, Impact, sans-serif !important;
-      font-size: clamp(4rem, 14vw, 10rem);
+      font-size: clamp(2.75rem, 8vw, 6rem);
       font-weight: 400 !important;
       line-height: .9;
       letter-spacing: -.025em;
+      text-align: center;
       text-transform: uppercase;
       white-space: nowrap;
       opacity: 1 !important;
@@ -3258,6 +3270,47 @@
 
     .thank-you-title .thank-you-first {
       color: #006a39 !important;
+    }
+
+    .next-marathon-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: clamp(120px, 18svh, 180px);
+      padding: 32px 20px;
+      background: var(--page-background) !important;
+      text-align: center;
+    }
+
+    .next-marathon-date {
+      margin: 0;
+      padding: .72em 1.2em;
+      border: 1px solid rgba(0, 106, 57, .32);
+      border-radius: 999px;
+      color: #006a39 !important;
+      background: rgba(255, 255, 255, .34) !important;
+      font: 600 clamp(.72rem, 1.6vw, .95rem)/1.25 Montserrat, Arial, sans-serif !important;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      animation: next-marathon-pulse 2.6s ease-in-out infinite;
+    }
+
+    .next-marathon-date time {
+      color: inherit !important;
+      font: inherit !important;
+      white-space: nowrap;
+    }
+
+    @keyframes next-marathon-pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 106, 57, 0);
+      }
+      50% {
+        transform: scale(1.025);
+        box-shadow: 0 0 0 7px rgba(0, 106, 57, .08);
+      }
     }
 
     .thank-you-confetti {
@@ -3296,7 +3349,8 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .confetti-piece {
+      .confetti-piece,
+      .next-marathon-date {
         animation: none;
       }
     }
@@ -3390,7 +3444,13 @@ gtag('config', 'G-TTNT13X4R1');
           <span class="confetti-piece" style="--x:73%;--y:86%;--rotate:33deg;--delay:-1.3s;--confetti-color:#006a39"></span>
           <span class="confetti-piece" style="--x:85%;--y:72%;--rotate:-12deg;--delay:-3s;--confetti-color:#47b24a"></span>
         </div>
-        <h2 class="thank-you-title" id="thankYouTitle"><span class="thank-you-first">Thank</span> You</h2>
+        <div class="thank-you-content">
+          <h2 class="thank-you-title" id="thankYouTitle"><span class="thank-you-first">Thank</span> You</h2>
+        </div>
+      </section>
+
+      <section class="next-marathon-section" aria-label="Next marathon date">
+        <p class="next-marathon-date">Next marathon: <time datetime="2027-06-25">26th June 2027</time></p>
       </section>
 
       <section class="panel photos-access-panel" aria-labelledby="photosAccessTitle">
