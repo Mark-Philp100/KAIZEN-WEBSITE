@@ -2286,7 +2286,7 @@
     }
 
     /* Montserrat everywhere except the branded hero title. */
-    body *:not(.hero-title):not(.hero-title *) {
+    body *:not(.hero-title):not(.hero-title *):not(.thank-you-title):not(.thank-you-title *) {
       font-family: Montserrat, Arial, sans-serif !important;
       font-weight: 400 !important;
     }
@@ -2523,7 +2523,7 @@
     }
 
     /* Final site color palette. */
-    html body *:not(.hero-title):not(.hero-title *):not(.page-one-scroll-cue):not(.page-one-scroll-cue *):not(.route-map-message):not(.route-map-message *):not(.page-footer-signature):not(.page-footer-signature *):not(.accommodation-panel):not(.accommodation-panel *):not(.prize-money-panel):not(.prize-money-panel *):not(.registration-block):not(.registration-block *):not(.map-upload-toast):not(button):not(.action):not(.route-map-action):not(.route-map-back):not(.route-distance-select):not(.route-download-button):not(.photos-access-button) {
+    html body *:not(.hero-title):not(.hero-title *):not(.thank-you-title):not(.thank-you-title *):not(.page-one-scroll-cue):not(.page-one-scroll-cue *):not(.route-map-message):not(.route-map-message *):not(.page-footer-signature):not(.page-footer-signature *):not(.accommodation-panel):not(.accommodation-panel *):not(.prize-money-panel):not(.prize-money-panel *):not(.registration-block):not(.registration-block *):not(.map-upload-toast):not(button):not(.action):not(.route-map-action):not(.route-map-back):not(.route-distance-select):not(.route-download-button):not(.photos-access-button) {
       color: #082314 !important;
     }
 
@@ -3228,6 +3228,78 @@
         border-color: var(--selected-route-color) !important;
       }
     }
+
+    .thank-you-panel {
+      min-height: clamp(300px, 56svh, 560px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(64px, 12vw, 120px) 20px;
+      background: var(--page-background) !important;
+      isolation: isolate;
+    }
+
+    .thank-you-title {
+      position: relative;
+      z-index: 2;
+      display: block;
+      margin: 0;
+      color: #00b637 !important;
+      font-family: Anton, Impact, sans-serif !important;
+      font-size: clamp(4rem, 14vw, 10rem);
+      font-weight: 400 !important;
+      line-height: .9;
+      letter-spacing: -.025em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .thank-you-title .thank-you-first {
+      color: #006a39 !important;
+    }
+
+    .thank-you-confetti {
+      position: absolute;
+      inset: 8%;
+      z-index: 1;
+      width: auto !important;
+      min-width: 0 !important;
+      padding: 0 !important;
+      pointer-events: none;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      display: block;
+      width: clamp(6px, 1.8vw, 10px);
+      height: clamp(15px, 4vw, 24px);
+      border-radius: 2px;
+      background: var(--confetti-color) !important;
+      transform: translate(-50%, -50%) rotate(var(--rotate));
+      animation: thank-you-confetti 3.4s ease-in-out var(--delay) infinite alternate;
+    }
+
+    .confetti-piece:nth-child(3n) {
+      width: clamp(9px, 2.3vw, 14px);
+      height: clamp(9px, 2.3vw, 14px);
+      border-radius: 50%;
+    }
+
+    @keyframes thank-you-confetti {
+      to {
+        transform: translate(-50%, calc(-50% - 8px)) rotate(calc(var(--rotate) + 14deg));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .confetti-piece {
+        animation: none;
+      }
+    }
   </style>
   <!-- Mobile-first implementation notes: ./mobile.md -->
    <!-- Google Tag Manager -->
@@ -3296,263 +3368,30 @@ gtag('config', 'G-TTNT13X4R1');
           <button class="hero-next-card" id="heroNextCard" type="button" aria-label="Show next hero image">
             <img id="heroPreviewImage" src="./two.jpg" alt="">
           </button>
-          <a class="page-one-scroll-cue" href="#eventCountdown" aria-label="Scroll to the event details">
+          <a class="page-one-scroll-cue" href="#thankYouTitle" aria-label="Scroll to thank you message">
             <span>SCROLL</span>
           </a>
         </div>
       </section>
 
-
-
-
-      <!-- ===================================================
-           PAGE 4
-           WHITE
-      ==================================================== -->
-
-      <section class="panel plain-white-panel page-four-panel">
-
-        <div class="page-4-content">
-
-          <p class="event-date save-date-copy reveal font-montserrat" style="color:#006a39 !important">
-
-            12 September 2026
-          </p>
-
-
-          <div
-            class="countdown reveal"
-            id="eventCountdown"
-            aria-label="Event countdown"
-            aria-live="polite"
-          >
-
-            <h2
-              class="countdown-today accommodation-title"
-              id="countdownToday"
-              aria-hidden="true"
-            >
-              TODAY
-            </h2>
-
-            <div class="time-box">
-
-              <strong id="days">
-                00
-              </strong>
-
-              <span>
-                Days
-              </span>
-
-            </div>
-
-
-            <div class="time-box">
-
-              <strong id="hours">
-                00
-              </strong>
-
-              <span>
-                Hours
-              </span>
-
-            </div>
-
-
-            <div class="time-box">
-
-              <strong id="minutes">
-                00
-              </strong>
-
-              <span>
-                Minutes
-              </span>
-
-
-            </div>
-
-
-            <div class="time-box">
-
-              <strong id="seconds">
-                00
-              </strong>
-
-              <span>
-                Seconds
-              </span>
-
-            </div>
-
-          </div>
-
-          <div class="venue-mini reveal">
-
-            <p class="eyebrow font-montserrat" style="color:#006a39 !important">
-              Location
-            </p>
-
-            <h3 class="venue-name font-cinzel-decorative" style="color:#006a39 !important">
-               Rushere, Uganda
-            </h3>
-
-            <a
-              class="action google-maps-button"
-              href="https://www.google.com/maps/search/?api=1&amp;query=Rushere%2C%20Uganda"
-              target="_blank"
-              rel="noopener"
-            >
-              Google Maps
-            </a>
-
-          </div>
-
+      <section class="panel thank-you-panel" aria-labelledby="thankYouTitle">
+        <div class="thank-you-confetti" aria-hidden="true">
+          <span class="confetti-piece" style="--x:14%;--y:30%;--rotate:-24deg;--delay:-.4s;--confetti-color:#006a39"></span>
+          <span class="confetti-piece" style="--x:24%;--y:15%;--rotate:18deg;--delay:-1.8s;--confetti-color:#47b24a"></span>
+          <span class="confetti-piece" style="--x:36%;--y:24%;--rotate:52deg;--delay:-2.5s;--confetti-color:#006a39"></span>
+          <span class="confetti-piece" style="--x:64%;--y:23%;--rotate:-38deg;--delay:-1.1s;--confetti-color:#47b24a"></span>
+          <span class="confetti-piece" style="--x:76%;--y:14%;--rotate:27deg;--delay:-2.8s;--confetti-color:#006a39"></span>
+          <span class="confetti-piece" style="--x:87%;--y:31%;--rotate:61deg;--delay:-.8s;--confetti-color:#47b24a"></span>
+          <span class="confetti-piece" style="--x:10%;--y:52%;--rotate:35deg;--delay:-2.2s;--confetti-color:#47b24a"></span>
+          <span class="confetti-piece" style="--x:91%;--y:54%;--rotate:-19deg;--delay:-1.5s;--confetti-color:#006a39"></span>
+          <span class="confetti-piece" style="--x:15%;--y:73%;--rotate:58deg;--delay:-2.7s;--confetti-color:#006a39"></span>
+          <span class="confetti-piece" style="--x:27%;--y:85%;--rotate:-31deg;--delay:-.6s;--confetti-color:#47b24a"></span>
+          <span class="confetti-piece" style="--x:39%;--y:76%;--rotate:16deg;--delay:-1.9s;--confetti-color:#006a39"></span>
+          <span class="confetti-piece" style="--x:61%;--y:77%;--rotate:-55deg;--delay:-2.4s;--confetti-color:#47b24a"></span>
+          <span class="confetti-piece" style="--x:73%;--y:86%;--rotate:33deg;--delay:-1.3s;--confetti-color:#006a39"></span>
+          <span class="confetti-piece" style="--x:85%;--y:72%;--rotate:-12deg;--delay:-3s;--confetti-color:#47b24a"></span>
         </div>
-
-      </section>
-
-      <section class="panel reception-schedule-card" aria-labelledby="receptionScheduleTitle">
-        <div class="reception-schedule-content">
-          <h2 class="reception-schedule-title accommodation-title" id="receptionScheduleTitle" style="color:#006a39 !important">Event Program</h2>
-
-          <div class="reception-schedule-timeline" id="receptionScheduleTimeline">
-            <div class="reception-schedule-line" aria-hidden="true"></div>
-            <div class="reception-schedule-marker" id="receptionScheduleMarker" aria-hidden="true">
-              <img src="./running-marker.png" alt="">
-            </div>
-
-            <div class="reception-schedule-side reception-schedule-time is-active" data-schedule-index="0">5:30am</div>
-            <div class="reception-schedule-side reception-schedule-event is-active" data-schedule-index="0">Arrival at venue</div>
-
-            <div class="reception-schedule-side reception-schedule-time" data-schedule-index="1">6:00am</div>
-            <div class="reception-schedule-side reception-schedule-event" data-schedule-index="1">Warm up</div>
-
-            <div class="reception-schedule-side reception-schedule-time" data-schedule-index="2">6:30am</div>
-            <div class="reception-schedule-side reception-schedule-event" data-schedule-index="2">Flag off</div>
-
-            <div class="reception-schedule-side reception-schedule-time" data-schedule-index="3">9:00am</div>
-            <div class="reception-schedule-side reception-schedule-event" data-schedule-index="3">Stretching</div>
-
-            <div class="reception-schedule-side reception-schedule-time" data-schedule-index="4">9:30am</div>
-            <div class="reception-schedule-side reception-schedule-event" data-schedule-index="4">Awarding 21km runners</div>
-
-            <div class="reception-schedule-side reception-schedule-time" data-schedule-index="5">12:30pm</div>
-            <div class="reception-schedule-side reception-schedule-event" data-schedule-index="5">Awarding 42km runners</div>
-
-            <div class="reception-schedule-side reception-schedule-time" data-schedule-index="6">1:00pm</div>
-            <div class="reception-schedule-side reception-schedule-event" data-schedule-index="6">Closing address</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="charity-flyer-panel" aria-label="Rushere Marathon school supplies charity drive">
-        <img
-          class="charity-flyer-image"
-          src="./charity_flyer%20Rushere.webp"
-          alt="Rushere Marathon charity drive collecting school supplies for Rushere Primary School"
-          loading="lazy"
-        >
-      </section>
-
-      <section class="panel route-maps-panel" aria-labelledby="routeMapsTitle">
-        <div class="route-maps-content">
-          <h2 class="route-maps-title accommodation-title" id="routeMapsTitle" style="color:#006a39 !important">Route Maps</h2>
-          <p class="route-maps-intro" style="color:#006a39 !important">Choose a race distance to view or download map.</p>
-          <div class="route-map-shell">
-            <div class="route-map-display" id="routeMapDisplay" data-distance="5" aria-live="polite">
-              <img id="routeMapImage" alt="">
-              <div class="route-map-placeholder">
-                <p class="route-map-current" id="routeMapCurrent">5KM Route Map</p>
-                <p>COMING SOON</p>
-              </div>
-            </div>
-            <div class="route-map-controls">
-              <label class="route-distance-field" for="routeDistance">
-                <span style="color:#006a39 !important">Race View</span>
-                <select class="route-distance-select" id="routeDistance">
-                  <option value="5" data-map="" data-filename="Rushere-Marathon-5KM-Map.png">5 KM</option>
-                  <option value="10" data-map="" data-filename="Rushere-Marathon-10KM-Map.png">10 KM</option>
-                  <option value="21" data-map="" data-filename="Rushere-Marathon-21KM-Map.png">21.1 KM</option>
-                  <option value="42" data-map="" data-filename="Rushere-Marathon-42KM-Map.png">42.2 KM</option>
-                </select>
-              </label>
-              <button class="route-download-button" id="routeDownload" type="button">DOWNLOAD</button>
-            </div>
-          </div>
-          <p class="route-kits-notice" style="color:#006a39 !important">Canon Buningwire will be the start & stop point.<br>Kits to be collected at Canon Buningwire guest house on 11th sept 2026.</p>
-
-        </div>
-      </section>
-
-      <section class="panel prize-money-panel" aria-labelledby="prizeMoneyTitle">
-        <div class="accommodation-content prize-money-content">
-          <h2 class="accommodation-title" id="prizeMoneyTitle">Prize Money</h2>
-
-          <div class="prize-money-shell">
-            <div class="prize-money-group">
-              <h3 class="prize-money-distance">42.2km</h3>
-              <div class="prize-money-table">
-                <p class="prize-money-entry">1st position: <strong>Ugx 1,000,000</strong></p>
-                <p class="prize-money-entry">2nd position: <strong>Ugx 500,000</strong></p>
-              </div>
-            </div>
-
-            <div class="prize-money-group">
-              <h3 class="prize-money-distance">21.1km</h3>
-              <div class="prize-money-table">
-                <p class="prize-money-entry">1st position: <strong>Ugx 500,000</strong></p>
-                <p class="prize-money-entry">2nd position: <strong>Ugx 250,000</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel accommodation-panel" aria-labelledby="accommodationTitle">
-        <div class="accommodation-content">
-          <h2 class="accommodation-title" id="accommodationTitle">Accommodation</h2>
-          <p class="accommodation-intro">Choose accommodation to view spaces.</p>
-
-          <div class="accommodation-shell">
-            <div class="accommodation-gallery" id="accommodationGallery" aria-live="polite">
-              <img class="accommodation-image" id="accommodationImage" alt="">
-              <div class="accommodation-placeholder" id="accommodationPlaceholder">
-                <strong id="accommodationPlaceholderTitle">Canon Buningwire</strong>
-                <span id="accommodationPlaceholderSlot">Photo 1 upload pending</span>
-              </div>
-              <button class="accommodation-arrow accommodation-arrow--previous" id="accommodationPrevious" type="button" aria-label="View previous accommodation photo">&#8249;</button>
-              <button class="accommodation-arrow accommodation-arrow--next" id="accommodationNext" type="button" aria-label="View next accommodation photo">&#8250;</button>
-              <p class="accommodation-counter" id="accommodationCounter">1 / 3</p>
-            </div>
-
-            <div class="accommodation-controls">
-              <label class="accommodation-field" for="accommodationSelect">
-                <span>View Stay</span>
-                <select class="route-distance-select accommodation-select" id="accommodationSelect">
-                  <option value="canon-buningwire">Canon Buningwire</option>
-                  <option value="step-in-lodge">Step in lodge</option>
-                  <option value="ihunde-farm-lodge">Ihunde farm lodge</option>
-                  <option value="ishaazi-farm-lodge-250">Ishaazi farm lodge (UGX 250,000)</option>
-                  <option value="ishaazi-farm-lodge-200">Ishaazi farm lodge (UGX 200,000)</option>
-                </select>
-              </label>
-
-              <p class="accommodation-contact" aria-live="polite">
-                Contact: <a id="accommodationContact">0702858717</a>
-              </p>
-
-              <div class="accommodation-price-wrap" aria-live="polite">
-                <span class="accommodation-price-label">Price</span>
-                <strong class="accommodation-price" id="accommodationPrice">UGX 60,000</strong>
-              </div>
-
-              <p class="accommodation-breakfast">Inclusive of breakfast</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="thank-you-title" id="thankYouTitle"><span class="thank-you-first">Thank</span> You</h2>
       </section>
 
       <section class="panel photos-access-panel" aria-labelledby="photosAccessTitle">
@@ -3583,10 +3422,6 @@ gtag('config', 'G-TTNT13X4R1');
     </div>
   </main>
 
-  <div class="map-upload-toast" id="mapUploadToast" role="status" aria-live="polite">
-    COMING SOON
-  </div>
-
   <!-- =======================================================
        PAGE FOOTER
   ======================================================== -->
@@ -3603,69 +3438,6 @@ gtag('config', 'G-TTNT13X4R1');
   ======================================================== -->
 
   <script>
-
-    /* Isolated, scroll-driven reception schedule. */
-    (() => {
-      function initializeReceptionSchedule() {
-        const timeline = document.getElementById("receptionScheduleTimeline");
-        const marker = document.getElementById("receptionScheduleMarker");
-
-        if (!timeline || !marker) {
-          return;
-        }
-
-        const sides = Array.from(
-          timeline.querySelectorAll(".reception-schedule-side[data-schedule-index]")
-        );
-        const rowCount = new Set(
-          sides.map((side) => side.dataset.scheduleIndex)
-        ).size;
-
-        if (!rowCount) {
-          return;
-        }
-
-        let updateRequested = false;
-
-        function updateReceptionSchedule() {
-          const timelineRect = timeline.getBoundingClientRect();
-          const viewportCenter = window.innerHeight * 0.5;
-          const rawProgress = (viewportCenter - timelineRect.top) / timelineRect.height;
-          const progress = Math.max(0, Math.min(1, rawProgress));
-          const activeIndex = Math.round(progress * (rowCount - 1));
-
-          marker.style.top = `${progress * 100}%`;
-          sides.forEach((side) => {
-            const isActive = Number(side.dataset.scheduleIndex) === activeIndex;
-            side.classList.toggle("is-active", isActive);
-          });
-
-          updateRequested = false;
-        }
-
-        function requestReceptionScheduleUpdate() {
-          if (updateRequested) {
-            return;
-          }
-
-          updateRequested = true;
-          window.requestAnimationFrame(updateReceptionSchedule);
-        }
-
-        window.addEventListener("scroll", requestReceptionScheduleUpdate, { passive: true });
-        window.addEventListener("resize", requestReceptionScheduleUpdate);
-        updateReceptionSchedule();
-      }
-
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initializeReceptionSchedule, { once: true });
-      } else {
-        initializeReceptionSchedule();
-      }
-    })();
-
-
-
 
     /* =======================================================
        SCROLL REVEAL OBSERVER
@@ -3741,305 +3513,6 @@ gtag('config', 'G-TTNT13X4R1');
           }
         );
     }
-
-    /* =======================================================
-       COUNTDOWN
-    ======================================================== */
-
-    const eventDayStart =
-      new Date(
-        "2026-09-12T05:30:00+03:00"
-      ).getTime();
-
-    const eventDayEnd =
-      new Date(
-        "2026-09-13T00:00:00+03:00"
-      ).getTime();
-
-    function updateCountdown() {
-      const now =
-        Date.now();
-      const countdown =
-        document.getElementById(
-          "eventCountdown"
-        );
-
-      const todayMessage =
-        document.getElementById(
-          "countdownToday"
-        );
-
-      const isEventDay =
-        now >= eventDayStart &&
-        now < eventDayEnd;
-
-      countdown.classList.toggle(
-        "is-today",
-        isEventDay
-      );
-      countdown.setAttribute(
-        "aria-label",
-        isEventDay
-          ? "The event is today"
-          : "Event countdown"
-      );
-
-      todayMessage.setAttribute(
-        "aria-hidden",
-        String(!isEventDay)
-      );
-
-      if (isEventDay) {
-        return;
-      }
-
-      const difference =
-        Math.max(
-          0,
-          eventDayStart -
-          now
-        );
-
-
-      const day =
-        86400000;
-
-      const hour =
-        3600000;
-
-      const minute =
-        60000;
-
-
-      document.getElementById(
-        "days"
-      ).textContent =
-
-        String(
-          Math.floor(
-            difference / day
-          )
-        ).padStart(
-          2,
-          "0"
-        );
-
-
-      document.getElementById(
-        "hours"
-      ).textContent =
-
-        String(
-          Math.floor(
-            (difference % day) /
-            hour
-          )
-        ).padStart(
-          2,
-          "0"
-        );
-
-
-      document.getElementById(
-        "minutes"
-      ).textContent =
-
-        String(
-          Math.floor(
-            (difference % hour) /
-            minute
-          )
-        ).padStart(
-          2,
-          "0"
-        );
-
-
-      document.getElementById(
-        "seconds"
-      ).textContent =
-
-        String(
-          Math.floor(
-            (difference % minute) /
-            1000
-          )
-        ).padStart(
-          2,
-          "0"
-        );
-
-    }
-
-
-    /* Run countdown immediately */
-
-    updateCountdown();
-
-
-    /* Update every second */
-
-    window.setInterval(
-      updateCountdown,
-      1000
-    );
-
-
-    const routeDistance = document.getElementById("routeDistance");
-    const routeDownload = document.getElementById("routeDownload");
-    const routeMapDisplay = document.getElementById("routeMapDisplay");
-    const routeMapImage = document.getElementById("routeMapImage");
-    const routeMapCurrent = document.getElementById("routeMapCurrent");
-    const mapUploadToast = document.getElementById("mapUploadToast");
-    let mapUploadToastTimer = 0;
-
-    function updateRouteMap() {
-      const selectedRoute = routeDistance.options[routeDistance.selectedIndex];
-      const distance = selectedRoute.textContent.trim();
-      const mapSource = selectedRoute.dataset.map;
-
-      routeMapCurrent.textContent = `${distance.replace(/\s+/g, "")} Route Map`;
-      routeMapDisplay.dataset.distance = selectedRoute.value;
-      routeDistance.dataset.distance = selectedRoute.value;
-      routeMapCurrent.style.setProperty("color", "#e5eedf", "important");
-      routeMapDisplay.querySelectorAll(".route-map-placeholder p").forEach((line) => {
-        line.style.setProperty("color", "#e5eedf", "important");
-      });
-      routeMapDisplay.classList.toggle("has-map", Boolean(mapSource));
-
-      if (mapSource) {
-        routeMapImage.src = mapSource;
-        routeMapImage.alt = `${distance} Rushere Marathon route map`;
-      } else {
-        routeMapImage.removeAttribute("src");
-        routeMapImage.alt = "";
-      }
-    }
-
-    routeDistance.addEventListener("change", updateRouteMap);
-    routeDownload.addEventListener("click", () => {
-      const selectedRoute = routeDistance.options[routeDistance.selectedIndex];
-      const mapSource = selectedRoute.dataset.map;
-      if (!mapSource) {
-        window.clearTimeout(mapUploadToastTimer);
-        mapUploadToast.classList.add("is-visible");
-        mapUploadToastTimer = window.setTimeout(() => {
-          mapUploadToast.classList.remove("is-visible");
-        }, 2400);
-        return;
-      }
-
-      const downloadLink = document.createElement("a");
-      downloadLink.href = mapSource;
-      downloadLink.download = selectedRoute.dataset.filename;
-      downloadLink.click();
-    });
-    updateRouteMap();
-
-    const accommodationPackages = {
-      "canon-buningwire": {
-        name: "Canon Buningwire",
-        price: "UGX 70,000",
-        contact: "0702858717",
-        photos: [
-          "images/accommodation/canon-1.webp",
-          "images/accommodation/canon-2.webp",
-          "images/accommodation/canon-3.webp"
-        ]
-      },
-      "step-in-lodge": {
-        name: "Step in lodge",
-        price: "UGX 40,000",
-        contact: "0788021770",
-        photos: [
-          "images/accommodation/multi-4.webp",
-          "images/accommodation/multi-2.webp",
-          "images/accommodation/multi-3.webp"
-        ]
-      },
-      "ihunde-farm-lodge": {
-        name: "Ihunde farm lodge",
-        price: "UGX 200,000",
-        contact: "0790000040",
-        photos: [
-          "images/accommodation/ihunde-1.webp",
-          "images/accommodation/ihunde-2.webp",
-          "images/accommodation/ihunde-3.webp"
-        ]
-      },
-      "ishaazi-farm-lodge-250": {
-        name: "Ishaazi farm lodge",
-        price: "UGX 250,000",
-        contact: "0783099178",
-        photos: [
-          "images/accommodation/ishaazi-1.webp",
-          "images/accommodation/ishaazi-2.webp",
-          "images/accommodation/ishazzi-3.webp"
-        ]
-      },
-      "ishaazi-farm-lodge-200": {
-        name: "Ishaazi farm lodge",
-        price: "UGX 200,000",
-        contact: "0783099178",
-        photos: [
-          "images/accommodation/isha-5.webp",
-          "images/accommodation/isha-1.webp",
-          "images/accommodation/isha-2.webp"
-        ]
-      }
-    };
-
-    const accommodationSelect = document.getElementById("accommodationSelect");
-    const accommodationGallery = document.getElementById("accommodationGallery");
-    const accommodationImage = document.getElementById("accommodationImage");
-    const accommodationPlaceholderTitle = document.getElementById("accommodationPlaceholderTitle");
-    const accommodationPlaceholderSlot = document.getElementById("accommodationPlaceholderSlot");
-    const accommodationCounter = document.getElementById("accommodationCounter");
-    const accommodationPrice = document.getElementById("accommodationPrice");
-    const accommodationContact = document.getElementById("accommodationContact");
-    const accommodationPrevious = document.getElementById("accommodationPrevious");
-    const accommodationNext = document.getElementById("accommodationNext");
-    let accommodationPhotoIndex = 0;
-
-    function updateAccommodation() {
-      const selectedPackage = accommodationPackages[accommodationSelect.value];
-      const photoSource = selectedPackage.photos[accommodationPhotoIndex];
-      const photoNumber = accommodationPhotoIndex + 1;
-
-      accommodationPrice.textContent = selectedPackage.price;
-      accommodationContact.textContent = selectedPackage.contact;
-      if (/^\d+$/.test(selectedPackage.contact)) {
-        accommodationContact.href = `tel:${selectedPackage.contact}`;
-      } else {
-        accommodationContact.removeAttribute("href");
-      }
-      accommodationCounter.textContent = `${photoNumber} / ${selectedPackage.photos.length}`;
-      accommodationPlaceholderTitle.textContent = selectedPackage.name;
-      accommodationPlaceholderSlot.textContent = `Photo ${photoNumber} upload pending`;
-      accommodationGallery.classList.toggle("has-photo", Boolean(photoSource));
-
-      if (photoSource) {
-        accommodationImage.src = photoSource;
-        accommodationImage.alt = `${selectedPackage.name} accommodation, photo ${photoNumber} of ${selectedPackage.photos.length}`;
-      } else {
-        accommodationImage.removeAttribute("src");
-        accommodationImage.alt = "";
-      }
-    }
-
-    function changeAccommodationPhoto(direction) {
-      const photoCount = accommodationPackages[accommodationSelect.value].photos.length;
-      accommodationPhotoIndex = (accommodationPhotoIndex + direction + photoCount) % photoCount;
-      updateAccommodation();
-    }
-
-    accommodationSelect.addEventListener("change", () => {
-      accommodationPhotoIndex = 0;
-      updateAccommodation();
-    });
-    accommodationPrevious.addEventListener("click", () => changeAccommodationPhoto(-1));
-    accommodationNext.addEventListener("click", () => changeAccommodationPhoto(1));
-    updateAccommodation();
 
     /* Hero transition replicated from helpNYAKAJU.html. */
     const heroSources = ["./one.jpg", "./two.jpg", "./three.jpg", "./four.jpg"];
