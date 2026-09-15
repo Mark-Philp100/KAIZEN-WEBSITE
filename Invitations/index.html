@@ -1781,22 +1781,19 @@
 
     .hero-title {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: max(16px, env(safe-area-inset-top));
+      left: max(16px, env(safe-area-inset-left));
       z-index: 5;
-      display: grid;
-      justify-items: center;
-      width: 92%;
+      width: clamp(140px, 17cqw, 210px);
       margin: 0;
-      transform: translate(-50%, -50%);
       pointer-events: none;
     }
 
     .hero-logo {
       display: block;
-      width: min(100%, 620px);
+      width: 100%;
       height: auto;
-      filter: drop-shadow(0 3px 0 rgba(0, 0, 0, .16));
+      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .4));
     }
 
     .hero-date {
@@ -1881,8 +1878,9 @@
       }
 
       .hero-title {
-        top: 48%;
-        width: 88%;
+        top: max(12px, env(safe-area-inset-top));
+        left: max(12px, env(safe-area-inset-left));
+        width: clamp(112px, 34vw, 150px);
       }
 
       .hero-date {
@@ -2304,16 +2302,18 @@
       border-color: #e5eedf !important;
     }
 
-    html body .page-footer .page-footer-signature {
-      color: #e5eedf !important;
+    html body .page-footer .page-footer-signature,
+    html body .page-footer .page-footer-signature a {
+      color: #ffffff !important;
       font-size: 0.65rem !important;
       font-weight: 500 !important;
       line-height: 1.5 !important;
     }
 
     @media (max-width: 520px) {
-      html body .page-footer .page-footer-signature {
-        color: #e5eedf !important;
+      html body .page-footer .page-footer-signature,
+      html body .page-footer .page-footer-signature a {
+        color: #ffffff !important;
         font-size: 0.65rem !important;
         font-weight: 500 !important;
         line-height: 1.5 !important;
@@ -2527,8 +2527,9 @@
       color: #082314 !important;
     }
 
-    html body .page-footer .page-footer-signature {
-      color: #e5eedf !important;
+    html body .page-footer .page-footer-signature,
+    html body .page-footer .page-footer-signature a {
+      color: #ffffff !important;
     }
 
     html body .route-map-message,
@@ -3481,7 +3482,7 @@ gtag('config', 'G-TTNT13X4R1');
 
   <footer class="page-footer">
     <div class="page-footer-artwork" role="img" aria-label="Rushere Marathon course illustration">
-      <p class="page-footer-signature"><a href="https://www.kaizensuppliesltd.com/" style="color: inherit; text-decoration: none;">DESIGN BY KAIZEN</a></p>
+      <p class="page-footer-signature"><a href="https://www.kaizensuppliesltd.com/" style="color: #fff; text-decoration: none;">DESIGN BY KAIZEN</a></p>
     </div>
   </footer>
 
@@ -3568,7 +3569,21 @@ gtag('config', 'G-TTNT13X4R1');
     }
 
     /* Hero transition replicated from helpNYAKAJU.html. */
-    const heroSources = ["./hero-1.webp", "./hero-2.webp", "./hero-3.webp"];
+    const heroSources = [
+      "./hero-1.webp",
+      "./hero-2.webp",
+      "./hero-3.webp",
+      "./4R4A0107.webp",
+      "./4R4A0117.webp",
+      "./4R4A0136.webp",
+      "./4R4A0146.webp",
+      "./4R4A0153.webp",
+      "./KLGF0276.webp",
+      "./KLGF0342.webp",
+      "./KLGF0794.webp",
+      "./KLGF0807.webp",
+      "./KLGF0912.webp",
+    ];
     const heroStage = document.querySelector(".hero-slideshow");
     const heroCurrentImage = document.getElementById("heroCurrentImage");
     const heroNextImage = document.getElementById("heroNextImage");
