@@ -9,11 +9,17 @@ deployment:
     - /bin/cp work.html $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
+    - /bin/cp sitemap.html $DEPLOYPATH
     - /bin/cp llms.txt $DEPLOYPATH
 
     # Shared navbar assets
     - /bin/cp projects-menu.css $DEPLOYPATH
     - /bin/cp projects-menu.js $DEPLOYPATH
+
+    # Kaizen Chat microsite (exclude its nested Git metadata)
+    - /bin/mkdir -p $DEPLOYPATH/Kaizen-Chat
+    - /bin/cp Kaizen-Chat/index.html $DEPLOYPATH/Kaizen-Chat/
+    - /bin/cp Kaizen-Chat/*.png $DEPLOYPATH/Kaizen-Chat/
 
     - /bin/cp *.webp $DEPLOYPATH
     - /bin/cp *.png $DEPLOYPATH

@@ -111,9 +111,20 @@
 }
 
 .project-link::after {
-  content: "\2197";
+  content: "";
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
   color: #6f6845;
-  font-size: 16px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  background: linear-gradient(
+    to top right,
+    transparent 43%,
+    currentColor 44%,
+    currentColor 56%,
+    transparent 57%
+  );
   transition: transform 220ms ease;
 }
 

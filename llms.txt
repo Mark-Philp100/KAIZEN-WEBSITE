@@ -7,7 +7,19 @@
 - [Home](https://www.kaizensuppliesltd.com/): Overview of Kaizen Supplies Ltd and its services.
 - [About](https://www.kaizensuppliesltd.com/about.html): The agency's story, values and approach.
 - [Work](https://www.kaizensuppliesltd.com/work.html): Selected client campaigns, creative projects and media productions.
+- [Kaizen Chat](https://www.kaizensuppliesltd.com/Kaizen-Chat/): WhatsApp business automation for instant customer replies, lead capture and shared team inbox workflows.
 - [Contact](https://www.kaizensuppliesltd.com/contact.html): Contact details and enquiry form.
+
+## Kaizen Chat
+
+Kaizen Chat is a product of Kaizen Supplies Ltd for businesses that serve customers through WhatsApp. It provides instant, business-approved replies, captures customer names and enquiries, shares approved information such as prices, opening hours, locations and payment details, and keeps conversations organised for a team.
+
+- Product type: WhatsApp business assistant and customer-service automation platform
+- Primary market: Businesses in Uganda
+- Core capabilities: instant replies, enquiry capture, official WhatsApp Business number support, shared team inboxes, quick replies, catalog tagging and business app integrations
+- Published plans: Baby at UGX 20,000 per week, Starter at UGX 75,000 per month and Business at UGX 150,000 per month; enterprise pricing is tailored
+- Setup: Approximately three to five working days after the required business information is supplied
+- Contact: info@kaizensuppliesltd.com
 
 ## Core services
 
