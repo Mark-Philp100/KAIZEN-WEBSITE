@@ -11,6 +11,10 @@ deployment:
     - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/cp llms.txt $DEPLOYPATH
 
+    # Shared navbar assets
+    - /bin/cp projects-menu.css $DEPLOYPATH
+    - /bin/cp projects-menu.js $DEPLOYPATH
+
     - /bin/cp *.webp $DEPLOYPATH
     - /bin/cp *.png $DEPLOYPATH
     - /bin/cp *.jpg $DEPLOYPATH
