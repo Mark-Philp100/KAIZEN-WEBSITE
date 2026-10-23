@@ -16,6 +16,16 @@ deployment:
     - /bin/cp projects-menu.css $DEPLOYPATH
     - /bin/cp projects-menu.js $DEPLOYPATH
 
+    # Kaizen Chat microsite
+    - /bin/mkdir -p $DEPLOYPATH/Kaizen-Chat
+    - /bin/cp Kaizen-Chat/index.html $DEPLOYPATH/Kaizen-Chat/
+    - /bin/cp Kaizen-Chat/k_chat_logo.png $DEPLOYPATH/Kaizen-Chat/
+    - /bin/cp Kaizen-Chat/k_chat_logo_white.png $DEPLOYPATH/Kaizen-Chat/
+    - /bin/cp Kaizen-Chat/kaizen_chat_logo.png $DEPLOYPATH/Kaizen-Chat/
+    - /bin/cp Kaizen-Chat/kaizen_chat_logo_white.png $DEPLOYPATH/Kaizen-Chat/
+    - /bin/cp "Kaizen-Chat/chat_footer (2).png" $DEPLOYPATH/Kaizen-Chat/
+    - /bin/cp Kaizen-Chat/screen.png $DEPLOYPATH/Kaizen-Chat/
+
     - /bin/cp *.webp $DEPLOYPATH
     - /bin/cp *.png $DEPLOYPATH
     - /bin/cp *.jpg $DEPLOYPATH
