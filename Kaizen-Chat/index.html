@@ -14,7 +14,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-TTNT13X4R1');
+  gtag('config', 'G-TTNT13X4R1', {
+    'send_page_view': true,
+    'page_title': 'Kaizen Chat | WhatsApp Business Automation Uganda',
+    'page_location': window.location.href
+  });
 </script>
 <meta content="web_standard" name="shell-type">
 <title>Kaizen Chat | WhatsApp Business Automation Uganda</title>
@@ -28,6 +32,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="application-name" content="Kaizen Chat">
 <meta name="theme-color" content="#0e4b60">
 <meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
 <meta name="geo.region" content="UG-C">
 <meta name="geo.placename" content="Kampala">
 <meta name="geo.position" content="0.347596;32.582520">
@@ -35,6 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="canonical" href="https://www.kaizensuppliesltd.com/Kaizen-Chat/">
 <link rel="alternate" hreflang="en-UG" href="https://www.kaizensuppliesltd.com/Kaizen-Chat/">
 <link rel="alternate" hreflang="x-default" href="https://www.kaizensuppliesltd.com/Kaizen-Chat/">
+<link rel="alternate" type="text/plain" href="https://www.kaizensuppliesltd.com/Kaizen-Chat/llms.txt" title="Kaizen Chat facts for AI assistants">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kaizen Supplies Ltd">
 <meta property="og:title" content="Kaizen Chat | WhatsApp Business Automation Uganda">
@@ -47,7 +54,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:image:height" content="1080">
 <meta property="og:image:alt" content="Kaizen Chat WhatsApp business automation logo">
 <meta property="og:locale" content="en_UG">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kaizen Chat | WhatsApp Business Automation Uganda">
 <meta name="twitter:description" content="Instant WhatsApp replies, lead capture and organised customer support for growing businesses.">
 <meta name="twitter:image" content="https://www.kaizensuppliesltd.com/Kaizen-Chat/kaizen_chat_logo.png">
@@ -62,11 +69,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "url": "https://www.kaizensuppliesltd.com/Kaizen-Chat/",
       "name": "Kaizen Chat | WhatsApp Business Automation Uganda",
       "description": "Kaizen Chat is a WhatsApp business assistant for instant customer replies, lead capture, shared inboxes and automated support in Uganda.",
+      "dateModified": "2026-10-23",
       "inLanguage": "en-UG",
       "isPartOf": {"@id": "https://www.kaizensuppliesltd.com/#website"},
       "about": {"@id": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#software"},
+      "hasPart": {"@id": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#faq"},
       "primaryImageOfPage": {"@id": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#primaryimage"},
       "breadcrumb": {"@id": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#breadcrumb"}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.kaizensuppliesltd.com/#website",
+      "url": "https://www.kaizensuppliesltd.com/",
+      "name": "Kaizen Supplies Ltd",
+      "publisher": {"@id": "https://www.kaizensuppliesltd.com/#organization"},
+      "inLanguage": "en-UG"
     },
     {
       "@type": "ImageObject",
@@ -90,14 +107,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "image": {"@id": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#primaryimage"},
       "provider": {"@id": "https://www.kaizensuppliesltd.com/#organization"},
       "areaServed": {"@type": "Country", "name": "Uganda"},
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "UGX",
-        "lowPrice": "20000",
-        "highPrice": "150000",
-        "offerCount": "3",
-        "url": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#pricing-options"
-      },
+      "offers": [
+        {"@type": "Offer", "name": "Baby Plan", "price": "20000", "priceCurrency": "UGX", "description": "UGX 20,000 per week", "url": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#pricing-options", "availability": "https://schema.org/InStock"},
+        {"@type": "Offer", "name": "Starter Plan", "price": "75000", "priceCurrency": "UGX", "description": "UGX 75,000 per month", "url": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#pricing-options", "availability": "https://schema.org/InStock"},
+        {"@type": "Offer", "name": "Business Plan", "price": "150000", "priceCurrency": "UGX", "description": "UGX 150,000 per month", "url": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#pricing-options", "availability": "https://schema.org/InStock"}
+      ],
       "featureList": [
         "Instant WhatsApp customer replies",
         "Lead and enquiry capture",
@@ -136,37 +150,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#faq-schema",
+      "@id": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#faq",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "What is Kaizen Chat?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Kaizen Chat is a WhatsApp assistant that answers customers' common questions instantly and saves their details for the business."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Kaizen Chat is a WhatsApp assistant that answers common customer questions instantly and saves customer details for your business."}
         },
         {
           "@type": "Question",
           "name": "Do I need an existing WhatsApp Business account to get started?",
-          "acceptedAnswer": {"@type": "Answer", "text": "No. Kaizen Chat connects through the official Meta Cloud API. A business can register a new phone number or migrate an existing business number."}
+          "acceptedAnswer": {"@type": "Answer", "text": "No. Kaizen Chat connects through the official Meta Cloud API. You can register a new phone number or migrate an existing business number."}
         },
         {
           "@type": "Question",
-          "name": "Is Kaizen Chat AI?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Kaizen Chat follows the questions and answers approved by the business, keeping replies predictable and on-brand."}
+          "name": "Is it AI?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Kaizen Chat follows the questions and answers you approve, which keeps replies predictable and on-brand."}
+        },
+        {
+          "@type": "Question",
+          "name": "What does it cost?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A one-time setup fee plus a message pack. WhatsApp may charge for certain message types, and we explain this upfront."}
         },
         {
           "@type": "Question",
           "name": "Do I need technical skills?",
-          "acceptedAnswer": {"@type": "Answer", "text": "No. The Kaizen Chat team builds the assistant and the business approves it."}
+          "acceptedAnswer": {"@type": "Answer", "text": "No. We build it, and you approve it."}
         },
         {
           "@type": "Question",
           "name": "How long does setup take?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Setup takes about three to five working days after the team receives the required business information."}
+          "acceptedAnswer": {"@type": "Answer", "text": "About three to five working days after we have your information."}
         },
         {
           "@type": "Question",
           "name": "Can customers pay through the chatbot?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Kaizen Chat can share MoMo, Airtel Money or bank details so customers know how to pay, but it does not collect the payment itself."}
+          "acceptedAnswer": {"@type": "Answer", "text": "The chatbot shares your MoMo, Airtel Money or bank details so customers know how to pay. It does not collect the payment itself."}
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when my messages run out?",
+          "acceptedAnswer": {"@type": "Answer", "text": "We will tell you before that happens, and you can always top up."}
+        },
+        {
+          "@type": "Question",
+          "name": "Who sees my customers' information?",
+          "acceptedAnswer": {"@type": "Answer", "text": "You and an authorized team member of your business."}
         }
       ]
     }
@@ -574,6 +603,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     #contact-form-modal.is-open > [role="dialog"] { transform: translateY(0) scale(1); opacity: 1; }
 
+    #privacy-policy-modal { opacity: 0; transition: opacity .25s ease; }
+    #privacy-policy-modal.is-open { opacity: 1; }
+    #privacy-policy-modal > [role="dialog"] {
+      transform: translateY(24px) scale(.985);
+      opacity: 0;
+      transition: transform .45s var(--ease-luxe), opacity .3s ease;
+    }
+    #privacy-policy-modal.is-open > [role="dialog"] { transform: translateY(0) scale(1); opacity: 1; }
+    .privacy-policy-content h3 {
+      margin-top: 2rem;
+      color: #0e4b60;
+      font-family: Montserrat, sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -.01em;
+    }
+    .dark .privacy-policy-content h3 { color: #73b74a; }
+    .privacy-policy-content p { margin-top: .75rem; line-height: 1.75; }
+    .privacy-policy-content ul { margin-top: .75rem; padding-left: 1.25rem; list-style: disc; }
+    .privacy-policy-content li { margin-top: .5rem; line-height: 1.7; }
+    .privacy-policy-content a { color: #0e4b60; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+    .dark .privacy-policy-content a { color: #adf680; }
+
     .table-scroll { scrollbar-width: thin; scrollbar-color: #73b74a rgba(14,75,96,.08); }
     .table-scroll::-webkit-scrollbar { display: block; height: 6px; }
     .table-scroll::-webkit-scrollbar-thumb { background: #73b74a; border-radius: 999px; }
@@ -609,6 +661,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       #faq .faq-card { padding: .875rem !important; border-radius: .75rem !important; }
       #faq .faq-trigger { font-size: .875rem !important; line-height: 1.35; gap: .75rem; }
       #contact-form-modal > [role="dialog"] { border-radius: 1.5rem 1.5rem 0 0; max-height: 96dvh; }
+      #privacy-policy-modal > [role="dialog"] { border-radius: 1.5rem 1.5rem 0 0; max-height: 96dvh; }
       button, a { -webkit-tap-highlight-color: transparent; }
       .button-luxe:hover { transform: none; }
     }
@@ -1149,7 +1202,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] dark:bg-[#73b74a] text-white font-headline font-extrabold text-sm shadow-[0_0_20px_rgba(14,75,96,0.2)]">2</span>
         <h3 class="font-headline text-lg font-medium text-[#010101] dark:text-white md:mt-5">We build your chatbot.</h3>
       </div>
-      <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">Menu, answers and lead form, ready for your approval in [X] working days.</p>
+      <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">Menu, answers and lead form, ready for your approval in three to five working days.</p>
     </li>
     <li class="relative rounded-2xl bg-white dark:bg-[#161d1c] border border-gray-200 dark:border-white/10 p-7 shadow-sm">
       <div class="flex items-center gap-4 md:block">
@@ -1161,10 +1214,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </ol>
 </section>
 <!-- 5. FAQ ACCORDION SECTION (#faq) -->
-<section class="max-w-3xl mx-auto px-4 sm:px-6 pb-20 sm:pb-28 pt-4 scroll-mt-28" id="faq">
+<section class="max-w-3xl mx-auto px-4 sm:px-6 pb-20 sm:pb-28 pt-4 scroll-mt-28" id="faq" aria-labelledby="faq-heading">
 <div class="text-center mb-8">
-<h2 class="mt-2 font-headline font-semibold text-2xl sm:text-3xl text-[#010101] dark:text-white tracking-tight">FAQs</h2>
-<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Everything you need to Know.</p>
+<h2 id="faq-heading" class="mt-2 font-headline font-semibold text-2xl sm:text-3xl text-[#010101] dark:text-white tracking-tight">Frequently asked questions</h2>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Clear answers about setup, pricing, payments and customer information.</p>
 </div>
 <div class="space-y-3" id="faq-accordion">
   <!-- FAQ Item 1 -->
@@ -1174,7 +1227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="material-symbols-outlined text-[#0e4b60] dark:text-[#73b74a] transition-transform duration-300 faq-icon">expand_more</span>
 </button>
 <div class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed hidden faq-content">
-            A WhatsApp assistant that answers your customers’ common questions instantly and saves their details for you.
+            Kaizen Chat is a WhatsApp assistant that answers common customer questions instantly and saves customer details for your business.
           </div>
 </div>
 <!-- FAQ Item 2 -->
@@ -1184,7 +1237,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="material-symbols-outlined text-[#0e4b60] dark:text-[#73b74a] transition-transform duration-300 faq-icon">expand_more</span>
 </button>
 <div class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed hidden faq-content">
-            No, you don't need a pre-existing WhatsApp Business app. In fact, Kaizen Chat connects straight through the official Meta Cloud API. You can register a brand-new phone number(Recommended) or migrate your existing business number smoothly with zero downtime.
+            No. Kaizen Chat connects through the official Meta Cloud API. You can register a new phone number or migrate an existing business number.
           </div>
 </div>
 <!-- FAQ Item 3 -->
@@ -1224,7 +1277,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="material-symbols-outlined text-[#0e4b60] dark:text-[#73b74a] transition-transform duration-300 faq-icon">expand_more</span>
 </button>
 <div class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed hidden faq-content">
-           About 3-5 working days after we have your information.
+           About three to five working days after we have your information.
           </div>
 </div>
 <!-- FAQ Item 7 -->
@@ -1234,7 +1287,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="material-symbols-outlined text-[#0e4b60] dark:text-[#73b74a] transition-transform duration-300 faq-icon">expand_more</span>
 </button>
 <div class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed hidden faq-content">
-            The chatbot shares your MoMo, Airtel Money or bank details so customers know how to pay. It doesn’t collect the payment itself.
+            The chatbot shares your MoMo, Airtel Money or bank details so customers know how to pay. It does not collect the payment itself.
           </div>
 </div>
 <!-- FAQ Item 8 -->
@@ -1244,17 +1297,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="material-symbols-outlined text-[#0e4b60] dark:text-[#73b74a] transition-transform duration-300 faq-icon">expand_more</span>
 </button>
 <div class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed hidden faq-content">
-            We’ll tell you before that happens, and you can always top up.
+            We will tell you before that happens, and you can always top up.
           </div>
 </div>
 <!-- FAQ Item 9 -->
 <div class="rounded-2xl bg-white dark:bg-[#161d1c] border border-gray-200 dark:border-white/10 p-6 transition-all duration-200 faq-card">
 <button class="w-full flex items-center justify-between text-left font-headline font-medium text-lg text-[#010101] dark:text-white faq-trigger focus:outline-none">
-<span class="">Who sees my customers’ information?</span>
+<span class="">Who sees my customers' information?</span>
 <span class="material-symbols-outlined text-[#0e4b60] dark:text-[#73b74a] transition-transform duration-300 faq-icon">expand_more</span>
 </button>
 <div class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed hidden faq-content">
-            You and an authorised Team Member of your business.
+            You and an authorized team member of your business.
           </div>
 </div>
 </div>
@@ -1339,7 +1392,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h4 class="mb-4 font-headline text-xs font-bold uppercase tracking-[0.18em] text-white/55">Contact &amp; Legal</h4>
         <ul class="space-y-2.5 text-sm font-medium text-white/75">
           <li class=""><a href="#contact-form" class="hover:text-[#73b74a] transition-colors" data-contact-modal data-interest="Contact Sales">Contact Sales</a></li>
-          <li class=""><a href="#" class="hover:text-[#73b74a] transition-colors">Privacy Policy</a></li>
+          <li class=""><a href="#privacy-policy" class="hover:text-[#73b74a] transition-colors" data-privacy-modal aria-haspopup="dialog">Privacy Policy</a></li>
           <li class=""><a href="#" class="hover:text-[#73b74a] transition-colors">Terms of Service</a></li>
         </ul>
       </div>
@@ -1365,6 +1418,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </footer>
+<!-- PRIVACY POLICY MODAL -->
+<div aria-hidden="true" class="fixed inset-0 z-[110] hidden items-end justify-center p-0 sm:items-center sm:p-6" id="privacy-policy-modal">
+  <div class="absolute inset-0 bg-[#010101]/75 backdrop-blur-sm" data-privacy-close></div>
+  <div aria-describedby="privacy-policy-summary" aria-labelledby="privacy-policy-title" aria-modal="true" class="relative z-10 flex w-full max-w-4xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl dark:bg-[#161d1c]" role="dialog" style="max-height: 90dvh;">
+    <header class="sticky top-0 z-10 flex items-start justify-between gap-5 border-b border-gray-200 bg-white/95 px-5 py-5 backdrop-blur sm:px-8 dark:border-white/10 dark:bg-[#161d1c]/95">
+      <div>
+        <p class="font-headline text-xs font-extrabold uppercase tracking-[0.18em] text-[#73b74a]">Legal</p>
+        <h2 class="mt-1 font-display text-2xl font-extrabold tracking-tight text-[#010101] sm:text-3xl dark:text-white" id="privacy-policy-title">Privacy Notice</h2>
+        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Last updated: Thursday 22 October 2026</p>
+      </div>
+      <button aria-label="Close privacy notice" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-[#0e4b60] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#73b74a] dark:bg-white/10 dark:text-gray-200" data-privacy-close type="button">
+        <span aria-hidden="true" class="material-symbols-outlined">close</span>
+      </button>
+    </header>
+
+    <div class="privacy-policy-content overflow-y-auto px-5 pb-10 pt-6 text-sm text-gray-700 sm:px-8 sm:text-base dark:text-gray-300" id="privacy-policy">
+      <p id="privacy-policy-summary">This notice explains how Kaizen Chat (“we”, “us”) uses your personal information when you message us on WhatsApp, and the part played by Kaizen Supplies Limited, which provides our chatbot service.</p>
+
+      <h3>1. Who is responsible</h3>
+      <ul>
+        <li><strong>[Business name]</strong>, [address], [email], [phone], decides how your information is used.</li>
+        <li><strong>Kaizen Supplies Limited</strong>, <a href="https://www.google.com/maps/search/Plot+12+Malcolm+X+Avenue,+Kololo+Central+Division" rel="noopener noreferrer" target="_blank">Plot 12 Malcolm X Avenue, Kololo Central Division</a>, <a href="mailto:info@kaizensuppliesltd.com">info@kaizensuppliesltd.com</a>, provides and supports our chatbot. It handles your information on our behalf and follows our instructions.</li>
+      </ul>
+
+      <h3>2. What information we collect</h3>
+      <ul>
+        <li>Your WhatsApp phone number and WhatsApp profile name</li>
+        <li>The messages you send and the choices you make in the chatbot</li>
+        <li>Details you choose to give us, such as your name, [email], what you want to buy, book or ask about, and [delivery area or location]</li>
+        <li>The date and time of your messages</li>
+      </ul>
+      <p><strong>Please don’t send us ID numbers, passwords, PINs, card numbers, health information or children’s details through this chatbot.</strong> We don’t ask for them.</p>
+
+      <h3>3. Why we use your information</h3>
+      <ul>
+        <li>To reply to you and give you what you asked for, such as prices, bookings or orders</li>
+        <li>To pass your request to our team</li>
+        <li>To keep records of enquiries, bookings and orders</li>
+        <li>To see which questions customers ask most, so we can improve our answers</li>
+        <li>To send you offers or updates, only if you have agreed</li>
+        <li>To meet legal obligations, such as tax and record keeping, where they apply</li>
+      </ul>
+      <p>We use your information with your consent, which you give by replying 1 in the chat, unless the law allows or requires us to use it without consent. You can withdraw your consent at any time. This does not affect what we did before you withdrew it.</p>
+
+      <h3>4. Who can see your information</h3>
+      <ul>
+        <li>Our authorised staff</li>
+        <li>Kaizen Supplies Limited, for setup and support</li>
+        <li>Our technology provider, Relinns Technologies, Mohali, Punjab 110055, India, which hosts the chatbot platform</li>
+        <li>WhatsApp (Meta), which carries your messages under its own privacy policy</li>
+        <li>Courts, authorities or regulators, when the law requires us to share it</li>
+      </ul>
+      <p>We do not sell your information, and we do not share it for other companies’ marketing.</p>
+
+      <h3>5. Storage outside Uganda</h3>
+      <p>Your information is stored and processed on servers in Relinns Technologies, Mohali, Punjab 110055, India, which may be outside Uganda. WhatsApp’s systems also operate internationally. By replying “agree” in the chat, you agree to this storage and transfer. We take steps to protect your information wherever it is.</p>
+
+      <h3>6. How long we keep it</h3>
+      <p>We keep your chat details for 12 months after your last message. We keep them longer only if we need them for a booking, order, warranty or legal record. After that, we delete them.</p>
+
+      <h3>7. Keeping your information safe</h3>
+      <p>Only authorised staff can see your details, each with their own login, and we remove access when someone leaves. No system is completely secure. If a breach could harm you, we will tell you and the Personal Data Protection Office as the law requires.</p>
+
+      <h3>8. Your rights</h3>
+      <p>Under Uganda’s Data Protection and Privacy Act, 2019, you can:</p>
+      <ul>
+        <li>Ask for a copy of the information we hold about you</li>
+        <li>Ask us to correct it</li>
+        <li>Ask us to delete it</li>
+        <li>Object to certain uses, including marketing</li>
+        <li>Withdraw your consent</li>
+      </ul>
+      <p>To use these rights, send the word <strong>PRIVACY</strong> in this chat or contact us at <a href="mailto:info@kaizensuppliesltd.com">info@kaizensuppliesltd.com</a> or <a href="tel:+256394309663">0394 309663</a>. We will reply within 5 days. We may need to check your identity first.</p>
+
+      <h3>9. Marketing messages</h3>
+      <p>We send offers and updates only if you have agreed. Reply <strong>STOP</strong> at any time and we will stop.</p>
+
+      <h3>10. Children</h3>
+      <p>This chatbot is for adults. If you are under 18, please ask a parent or guardian to use it with you.</p>
+
+      <h3>11. Changes to this notice</h3>
+      <p>We may update this notice. The date at the top shows the latest version, and we will tell you in the chat about important changes.</p>
+
+      <h3>12. Contact and complaints</h3>
+      <p>Questions? Contact Legal, Kaizen Supplies Limited, at <a href="mailto:info@kaizensuppliesltd.com">info@kaizensuppliesltd.com</a> or <a href="tel:+256394309663">0394 309663</a>.</p>
+      <p>If you are not happy with our answer, you can complain to the Personal Data Protection Office in Uganda.</p>
+      <ul>
+        <li><strong>Address:</strong> 7th Floor, Padre Pio House, <a href="https://www.google.com/maps/search/Plot+32+Lumumba+Ave,+Kampala" rel="noopener noreferrer" target="_blank">Plot 32 Lumumba Avenue, Kampala</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+256417801008">041 7801008</a></li>
+      </ul>
+
+      <div class="mt-8 rounded-2xl border border-[#73b74a]/30 bg-[#73b74a]/10 p-5 text-sm dark:bg-[#73b74a]/5">
+        <p class="mt-0"><strong>Need help?</strong> Email <a href="mailto:info@kaizensuppliesltd.com">info@kaizensuppliesltd.com</a> or call <a href="tel:+256394309663">0394 309663</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- CONTACT SALES / BOOK DEMO MODAL -->
 <div aria-hidden="true" class="fixed inset-0 z-[100] hidden items-end justify-center p-0 sm:items-center sm:p-6" id="contact-form-modal">
   <div class="absolute inset-0 bg-[#010101]/70 backdrop-blur-sm" data-modal-close></div>
@@ -1474,6 +1624,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       const htmlEl = document.documentElement;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       htmlEl.classList.add('motion-ready');
+
+      function trackEvent(eventName, parameters) {
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', eventName, Object.assign({
+          page_section: 'kaizen_chat'
+        }, parameters || {}));
+      }
 
       // 1. PREMIUM MOTION & INTERACTION SYSTEM
       document.querySelectorAll('#pricing-options a, #contact a, #contact-form-modal button[type="submit"], #contact-form-modal button[data-modal-close]').forEach(function (button) {
@@ -1610,13 +1767,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         btnMonthly.addEventListener('click', function () {
           isAnnual = false;
           updateBilling();
+          trackEvent('pricing_billing_change', { billing_period: 'monthly' });
         });
 
         btnAnnual.addEventListener('click', function () {
           isAnnual = true;
           updateBilling();
+          trackEvent('pricing_billing_change', { billing_period: 'annual' });
         });
       }
+
+      document.querySelectorAll('#pricing-options a, .enterprise-plan a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          const plan = link.closest('.pricing-card, .enterprise-plan');
+          const planHeading = plan ? plan.querySelector('h3') : null;
+          trackEvent('select_plan', {
+            plan_name: planHeading ? planHeading.textContent.trim() : 'Unknown plan',
+            billing_period: isAnnual ? 'annual' : 'monthly'
+          });
+        });
+      });
 
       // 5. FAQ INTERACTIVE ACCORDION
       const faqCards = document.querySelectorAll('.faq-card');
@@ -1645,11 +1815,85 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             card.classList.add('is-open');
             trigger.setAttribute('aria-expanded', 'true');
             icon.style.transform = 'rotate(180deg)';
+            trackEvent('faq_open', {
+              faq_question: trigger.textContent.trim(),
+              faq_position: index + 1
+            });
           }
         });
       });
 
-      // 6. CONTACT SALES / BOOK DEMO MODAL
+      // 6. PRIVACY POLICY MODAL
+      const privacyModal = document.getElementById('privacy-policy-modal');
+      const privacyTriggers = document.querySelectorAll('[data-privacy-modal]');
+      const privacyCloseButtons = privacyModal ? privacyModal.querySelectorAll('[data-privacy-close]') : [];
+      let privacyLastFocusedElement = null;
+      let privacyCloseTimer = null;
+
+      function openPrivacyModal(trigger) {
+        if (!privacyModal) return;
+        window.clearTimeout(privacyCloseTimer);
+        privacyLastFocusedElement = trigger || document.activeElement;
+        privacyModal.classList.remove('hidden');
+        privacyModal.classList.add('flex');
+        privacyModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        window.requestAnimationFrame(function () { privacyModal.classList.add('is-open'); });
+        window.setTimeout(function () {
+          const closeButton = privacyModal.querySelector('button[data-privacy-close]');
+          if (closeButton) closeButton.focus();
+        }, prefersReducedMotion ? 0 : 300);
+        trackEvent('privacy_policy_open');
+      }
+
+      function closePrivacyModal() {
+        if (!privacyModal) return;
+        privacyModal.classList.remove('is-open');
+        privacyModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        privacyCloseTimer = window.setTimeout(function () {
+          privacyModal.classList.add('hidden');
+          privacyModal.classList.remove('flex');
+          if (privacyLastFocusedElement && typeof privacyLastFocusedElement.focus === 'function') {
+            privacyLastFocusedElement.focus();
+          }
+        }, prefersReducedMotion ? 0 : 280);
+      }
+
+      privacyTriggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          event.preventDefault();
+          openPrivacyModal(trigger);
+        });
+      });
+
+      privacyCloseButtons.forEach(function (button) {
+        button.addEventListener('click', closePrivacyModal);
+      });
+
+      if (privacyModal) {
+        privacyModal.addEventListener('keydown', function (event) {
+          if (event.key !== 'Tab') return;
+          const focusable = Array.from(privacyModal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+            .filter(function (element) { return element.offsetParent !== null; });
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        });
+      }
+
+      if (window.location.hash === '#privacy-policy' && privacyTriggers.length) {
+        openPrivacyModal(privacyTriggers[0]);
+      }
+
+      // 7. CONTACT SALES / BOOK DEMO MODAL
       const contactModal = document.getElementById('contact-form-modal');
       const contactForm = document.getElementById('contact-form');
       const contactFormContent = document.getElementById('contact-form-content');
@@ -1748,6 +1992,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           selectInterest(contactInterest.options[0].value, false);
         }
 
+        trackEvent('contact_form_open', {
+          interest: contactInterest.value,
+          cta_text: trigger.textContent.trim()
+        });
+
         contactModal.classList.remove('hidden');
         contactModal.classList.add('flex');
         contactModal.setAttribute('aria-hidden', 'false');
@@ -1785,6 +2034,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       });
 
       document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && privacyModal && !privacyModal.classList.contains('hidden')) {
+          closePrivacyModal();
+          return;
+        }
         if (event.key === 'Escape' && contactInterestPicker && contactInterestPicker.classList.contains('is-open')) {
           setInterestDropdown(false, false);
           contactInterestTrigger.focus();
@@ -1820,10 +2073,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             contactFormContent.classList.add('hidden');
             contactFormSuccess.classList.remove('hidden');
+            trackEvent('generate_lead', {
+              currency: 'UGX',
+              value: 0,
+              lead_source: 'kaizen_chat_web',
+              interest: formData.get('interest') || 'Not specified'
+            });
           } catch (error) {
             if (contactFormError) contactFormError.classList.remove('hidden');
             if (contactSubmit) contactSubmit.disabled = false;
             if (contactSubmitLabel) contactSubmitLabel.textContent = 'Send enquiry';
+            trackEvent('contact_form_error', {
+              interest: formData.get('interest') || 'Not specified'
+            });
           }
         });
       }

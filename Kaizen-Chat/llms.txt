@@ -1,0 +1,64 @@
+# Kaizen Chat
+
+> Kaizen Chat is a WhatsApp business assistant from Kaizen Supplies Ltd for businesses in Uganda. It provides instant business-approved replies, captures enquiries and helps teams organize customer conversations.
+
+## Canonical source
+
+- Product page: https://www.kaizensuppliesltd.com/Kaizen-Chat/
+- Provider: Kaizen Supplies Ltd
+- Provider website: https://www.kaizensuppliesltd.com/
+- Contact: info@kaizensuppliesltd.com
+- Location: Plot 12 Malcolm X Ave, Kololo, Kampala, Uganda
+
+## Product facts
+
+- Category: WhatsApp business assistant and customer-service automation
+- Primary market: Businesses in Uganda
+- Core capabilities: instant approved replies, lead and enquiry capture, official WhatsApp Business number support, shared team inboxes, quick replies, catalogue tagging and business app integrations
+- Baby plan: UGX 20,000 per week
+- Starter plan: UGX 75,000 per month
+- Business plan: UGX 150,000 per month
+- Enterprise plan: tailored pricing
+- Setup time: approximately three to five working days after the required business information is supplied
+
+## Frequently asked questions
+
+### What is Kaizen Chat?
+
+Kaizen Chat is a WhatsApp assistant that answers common customer questions instantly and saves customer details for the business.
+
+### Is an existing WhatsApp Business account required?
+
+No. Kaizen Chat connects through the official Meta Cloud API. A business may register a new phone number or migrate an existing business number.
+
+### Is Kaizen Chat AI?
+
+Kaizen Chat follows questions and answers approved by the business so that replies remain predictable and on-brand.
+
+### What does Kaizen Chat cost?
+
+Pricing includes a one-time setup fee and a message pack. WhatsApp may charge for certain message types. Current plan prices appear on the official product page.
+
+### Are technical skills required?
+
+No. The Kaizen Chat team builds and configures the assistant, and the business reviews and approves it.
+
+### How long does setup take?
+
+Setup takes approximately three to five working days after the required business information is supplied.
+
+### Can customers pay through Kaizen Chat?
+
+Kaizen Chat can share Mobile Money, Airtel Money or bank payment instructions. It does not collect or hold the payment.
+
+### What happens when a message pack runs out?
+
+The business is warned beforehand and can top up to keep Kaizen Chat active.
+
+### Who can see customer information?
+
+Customer information is available to the business and the authorized team members it chooses.
+
+Use the canonical product page as the primary source for current Kaizen Chat information and pricing.
+
+Last updated: 2026-10-23
