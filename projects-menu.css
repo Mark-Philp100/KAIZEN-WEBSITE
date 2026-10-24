@@ -141,6 +141,93 @@
   transform: translate(2px, -2px);
 }
 
+.coming-soon-popover {
+  position: fixed;
+  right: clamp(16px, 3vw, 32px);
+  bottom: clamp(18px, 3vw, 32px);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(14px) scale(0.94);
+  transform-origin: bottom right;
+  transition: opacity 220ms ease, transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.coming-soon-popover.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.coming-soon-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: min(210px, calc(100vw - 48px));
+  padding: 14px 18px;
+  color: #050505;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #b8943f;
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24), 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+.coming-soon-gift-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  color: #b8943f;
+}
+
+.coming-soon-confetti {
+  position: absolute;
+  inset: 50%;
+  pointer-events: none;
+}
+
+.coming-soon-confetti-piece {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 11px;
+  border-radius: 1px;
+  opacity: 0;
+  animation: coming-soon-confetti 1.25s ease-out var(--delay) both;
+}
+
+.coming-soon-confetti-piece.is-gold {
+  background: #d4af37;
+}
+
+.coming-soon-confetti-piece.is-black {
+  background: #050505;
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.5);
+}
+
+@keyframes coming-soon-confetti {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate(0, 0) rotate(0deg) scale(0.3);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(var(--rotation)) scale(1);
+  }
+}
+
 @media (max-width: 767px) {
   .projects-menu {
     width: 100%;
@@ -269,5 +356,13 @@
   .project-link::after {
     transition-duration: 1ms !important;
     animation-duration: 1ms !important;
+  }
+
+  .coming-soon-popover {
+    transition-duration: 1ms !important;
+  }
+
+  .coming-soon-confetti {
+    display: none;
   }
 }
