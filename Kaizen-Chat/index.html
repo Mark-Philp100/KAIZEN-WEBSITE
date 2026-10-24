@@ -287,6 +287,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .button-luxe .material-symbols-outlined { transition: transform .4s var(--ease-luxe); }
     .button-luxe:hover .material-symbols-outlined { transform: translateX(4px); }
 
+    @keyframes nav-demo-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(115, 183, 74, 0); }
+      50% { box-shadow: 0 0 0 7px rgba(115, 183, 74, .2); }
+    }
+    .nav-demo-pulse { animation: nav-demo-pulse 2.8s ease-in-out infinite; }
+
     .swoosh-underline {
       position: relative;
       display: inline-block;
@@ -749,7 +755,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="material-symbols-outlined text-[20px] block dark:hidden text-[#010101]" id="theme-icon-light">dark_mode</span>
 <span class="material-symbols-outlined text-[20px] hidden dark:block text-[#73b74a]" id="theme-icon-dark">light_mode</span>
 </button>
-<a class="button-luxe hidden sm:inline-flex lg:hidden xl:inline-flex items-center justify-center text-sm font-bold bg-[#010101] dark:bg-[#73b74a] text-white dark:text-[#0e4b60] hover:bg-[#0e4b60] dark:hover:bg-[#85c95b] hover:shadow-[0_0_20px_rgba(115,183,74,0.35)] px-5 py-2.5 rounded-xl transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
+<a class="button-luxe nav-demo-pulse hidden sm:inline-flex lg:hidden xl:inline-flex items-center justify-center text-sm font-bold bg-[#010101] dark:bg-[#73b74a] text-white dark:text-[#0e4b60] hover:bg-[#0e4b60] dark:hover:bg-[#85c95b] hover:shadow-[0_0_20px_rgba(115,183,74,0.35)] px-5 py-2.5 rounded-xl transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
           Book Demo
         </a>
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-white text-[#0e4b60] shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-[#73b74a]" id="mobile-menu-button" type="button">
@@ -793,8 +799,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-normal leading-relaxed">
           Kaizen Chat is the WhatsApp assistant for your business. It replies in seconds, day and night, and keeps every enquiry safe, so you can focus on running your business.
         </p>
+<!-- HOW IT WORKS SECTION -->
+<section aria-labelledby="how-it-works-heading" class="w-full max-w-7xl px-0 pb-16 pt-16 scroll-mt-28 sm:pb-20" id="how-it-works">
+  <div class="mb-12 text-center">
+    <h2 class="mt-2 font-headline text-3xl font-bold tracking-tight text-[#010101] dark:text-white sm:text-4xl" id="how-it-works-heading">How it works</h2>
+  </div>
+  <ol class="grid grid-cols-1 gap-6 text-left md:grid-cols-3 lg:gap-8">
+    <li class="relative rounded-2xl border border-gray-200 bg-white p-7 shadow-sm dark:border-white/10 dark:bg-[#161d1c]">
+      <div class="flex items-center gap-4 md:block">
+        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#73b74a] font-headline text-sm font-extrabold text-white shadow-[0_0_20px_rgba(115,183,74,0.25)]">1</span>
+        <h3 class="font-headline text-lg font-medium text-[#010101] dark:text-white md:mt-5">Tell us about your business.</h3>
+      </div>
+      <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">A 20-minute chat about your most common questions.</p>
+    </li>
+    <li class="relative rounded-2xl border border-gray-200 bg-white p-7 shadow-sm dark:border-white/10 dark:bg-[#161d1c]">
+      <div class="flex items-center gap-4 md:block">
+        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] font-headline text-sm font-extrabold text-white shadow-[0_0_20px_rgba(14,75,96,0.2)] dark:bg-[#73b74a]">2</span>
+        <h3 class="font-headline text-lg font-medium text-[#010101] dark:text-white md:mt-5">We build your chatbot.</h3>
+      </div>
+      <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">Menu, answers and lead form, ready for your approval in three to five working days.</p>
+    </li>
+    <li class="relative rounded-2xl border border-gray-200 bg-white p-7 shadow-sm dark:border-white/10 dark:bg-[#161d1c]">
+      <div class="flex items-center gap-4 md:block">
+        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#73b74a] font-headline text-sm font-extrabold text-white shadow-[0_0_20px_rgba(115,183,74,0.25)]">3</span>
+        <h3 class="font-headline text-lg font-medium text-[#010101] dark:text-white md:mt-5">You approve and go live.</h3>
+      </div>
+      <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">Customers get instant replies. Each month we review what they ask and make it better.</p>
+    </li>
+  </ol>
+</section>
 <!-- Customer Pain Points & Solution -->
-<section aria-labelledby="sound-familiar-heading" class="mt-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#161d1c] shadow-sm text-left">
+<section aria-labelledby="sound-familiar-heading" class="mt-8 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#161d1c] shadow-sm text-left">
   <div class="p-4 sm:p-5 lg:p-8">
     <h2 class="font-headline text-xl lg:text-2xl font-bold text-[#010101] dark:text-white" id="sound-familiar-heading">Sound familiar?</h2>
     <ul class="mt-3 lg:mt-5 space-y-2.5 lg:space-y-4 text-xs sm:text-sm lg:text-base leading-relaxed text-gray-600 dark:text-gray-300">
@@ -823,10 +858,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 <!-- Monthly / Annual Toggle Switch -->
 <div class="mt-8 flex w-full max-w-md items-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl sm:rounded-full bg-gray-100 dark:bg-[#1a2120] border border-gray-200 dark:border-white/10 shadow-inner">
-<button class="min-h-11 flex-1 px-3 sm:px-6 py-2 rounded-xl sm:rounded-full text-xs sm:text-sm font-bold font-headline transition-all duration-200 bg-white dark:bg-[#0e4b60] text-[#010101] dark:text-white shadow-sm" id="billing-monthly">
+<button class="min-h-11 flex-1 px-3 sm:px-6 py-2 rounded-xl sm:rounded-full text-xs sm:text-sm font-bold font-headline transition-all duration-200 bg-[#0e4b60] text-white shadow-sm" id="billing-monthly">
             Monthly Billing
           </button>
-<button class="min-h-11 flex-1 px-2.5 sm:px-6 py-2 rounded-xl sm:rounded-full text-xs sm:text-sm font-bold font-headline transition-all duration-200 text-gray-600 dark:text-gray-400 hover:text-[#010101] dark:hover:text-white flex flex-nowrap items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap" id="billing-annual">
+<button class="min-h-11 flex-1 px-2.5 sm:px-6 py-2 rounded-xl sm:rounded-full text-xs sm:text-sm font-bold font-headline transition-all duration-200 text-gray-600 dark:text-gray-400 dark:hover:text-white flex flex-nowrap items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap" id="billing-annual">
 <span class="whitespace-nowrap">Annual Billing</span>
 <span class="shrink-0 whitespace-nowrap bg-[#73b74a] text-white text-[10px] sm:text-xs font-extrabold px-2 sm:px-2.5 py-0.5 rounded-full uppercase tracking-wider">Save 20%</span>
 </button>
@@ -1013,66 +1048,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="enterprise-plan preserve-on-dark mx-auto mt-5 max-w-6xl rounded-2xl px-6 py-7 text-white sm:px-8 sm:py-8 md:ml-0 md:mr-[-1.5rem] md:w-[calc(100%+1.5rem)] md:max-w-none md:px-9 md:py-8 lg:mt-6 lg:mr-[-2.5rem] lg:w-[calc(100%+2.5rem)] lg:flex lg:items-center lg:justify-between lg:gap-10 lg:px-10 lg:py-9" id="enterprise-plan">
   <div class="w-full max-w-2xl lg:flex-1">
     <div class="flex flex-wrap items-center gap-3">
-      <h3 class="font-headline text-xl font-bold sm:text-2xl" id="enterprise-plan-title">Enterprise Plan</h3>
-      <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#adf680] md:ml-auto">Custom</span>
+      <h3 class="font-headline text-xl font-bold sm:text-2xl" id="enterprise-plan-title">Enterprise</h3>
     </div>
     <div class="mt-3 flex items-baseline gap-2">
-      <span class="swoosh-underline font-display text-2xl font-semibold tracking-tight sm:text-3xl">Tailored</span>
+      <span class="swoosh-underline font-display text-lg font-semibold tracking-tight sm:text-xl">Tailored</span>
       <span class="text-sm text-white/70">to your scale</span>
     </div>
-    <p class="mt-4 max-w-xl text-sm leading-relaxed text-white/75">A tailored solution for complex, high-volume operations that need advanced integrations, stronger controls, and hands-on support.</p>
+    <p class="mt-4 max-w-xl text-sm leading-relaxed text-white/75">A custom solution for complex, high-volume operations that need advanced integrations, stronger controls, and hands-on support.</p>
   </div>
-  <a class="button-luxe mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-white px-8 py-3.5 font-headline text-sm font-bold text-[#0e4b60] shadow-[0_14px_35px_rgba(0,0,0,0.18)] hover:bg-[#73b74a] hover:text-white hover:shadow-[0_0_24px_rgba(115,183,74,0.42)] lg:mt-0 lg:w-auto lg:min-w-[220px]" data-contact-modal data-interest="Contact Sales" href="#contact-form">
+  <a class="button-luxe mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-white px-8 py-3.5 font-headline text-sm font-bold text-[#0e4b60] shadow-[0_14px_35px_rgba(0,0,0,0.18)] hover:bg-[#73b74a] hover:text-white hover:shadow-[0_0_24px_rgba(115,183,74,0.42)] md:w-auto md:min-w-[200px] md:self-start md:px-8 md:py-3.5 md:text-sm lg:mt-0 lg:min-w-[220px] lg:self-auto" data-contact-modal data-interest="Contact Sales" href="#contact-form">
     <span>Contact Sales</span>
     <span class="material-symbols-outlined text-[19px]">arrow_forward</span>
   </a>
 </div>
 
-<!-- ADD-ONS: OPTIONAL CAPACITY & CUSTOMISATION -->
-<section aria-labelledby="addons-title" class="mx-auto mt-14 max-w-4xl scroll-mt-28" id="addons">
-  <div class="mx-auto max-w-2xl text-center">
-    <span class="font-headline text-xs font-bold uppercase tracking-[0.18em] text-[#0e4b60] dark:text-[#73b74a]">Make it yours</span>
-    <h2 class="mt-2 font-headline text-2xl font-bold tracking-tight text-[#010101] dark:text-white sm:text-3xl" id="addons-title">Add-ons</h2>
-  </div>
-  <div class="addon-card mt-7 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-white/10 dark:bg-[#161d1c]">
-    <div class="grid gap-3 border-b border-gray-100 px-4 py-4 dark:border-white/5 sm:grid-cols-[9rem_1fr] sm:items-center sm:px-5">
-      <div>
-        <h3 class="font-headline text-base font-bold text-[#010101] dark:text-white">Messages</h3>
-        <p class="mt-0.5 text-[11px] text-gray-500 dark:text-gray-400">Top-Ups</p>
-      </div>
-      <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
-        <div class="rounded-lg bg-gray-50 px-2.5 py-2 dark:bg-white/[0.04]"><span class="block text-[11px] font-semibold text-gray-500 dark:text-gray-400">250</span><span class="block text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">20,000 UGX</span></div>
-        <div class="rounded-lg bg-gray-50 px-2.5 py-2 dark:bg-white/[0.04]"><span class="block text-[11px] font-semibold text-gray-500 dark:text-gray-400">1,000</span><span class="block text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">50,000 UGX</span></div>
-        <div class="rounded-lg bg-gray-50 px-2.5 py-2 dark:bg-white/[0.04]"><span class="block text-[11px] font-semibold text-gray-500 dark:text-gray-400">5,000</span><span class="block text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">100,000 UGX</span></div>
-        <div class="rounded-lg bg-gray-50 px-2.5 py-2 dark:bg-white/[0.04]"><span class="block text-[11px] font-semibold text-gray-500 dark:text-gray-400">10,000</span><span class="block text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">190,000 UGX</span></div>
-      </div>
-    </div>
-    <div class="grid gap-3 border-b border-gray-100 px-4 py-4 dark:border-white/5 sm:grid-cols-[9rem_1fr] sm:items-center sm:px-5">
-      <div>
-        <h3 class="font-headline text-base font-bold text-[#010101] dark:text-white">Team Members</h3>
-        <p class="mt-0.5 text-[11px] text-gray-500 dark:text-gray-400">Per added member</p>
-      </div>
-      <div class="grid gap-2 sm:grid-cols-3">
-        <div class="flex items-center justify-between gap-2 rounded-lg bg-gray-50 px-3 py-2 dark:bg-white/[0.04]"><span class="text-[11px] font-semibold text-gray-500 dark:text-gray-400">Starter</span><span class="text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">30,000 UGX</span></div>
-        <div class="flex items-center justify-between gap-2 rounded-lg bg-gray-50 px-3 py-2 dark:bg-white/[0.04]"><span class="text-[11px] font-semibold text-gray-500 dark:text-gray-400">Business</span><span class="text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">50,000 UGX</span></div>
-        <div class="flex items-center justify-between gap-2 rounded-lg bg-gray-50 px-3 py-2 dark:bg-white/[0.04]"><span class="text-[11px] font-semibold text-gray-500 dark:text-gray-400">Enterprise</span><span class="text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">100,000 UGX</span></div>
-      </div>
-    </div>
-    <div class="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
-      <div>
-        <h3 class="font-headline text-base font-bold text-[#010101] dark:text-white">Broadcasting</h3>
-        <p class="mt-0.5 text-xs text-gray-500 dark:text-gray-400">Targeted WhatsApp broadcasts for your audience.</p>
-      </div>
-      <a class="button-luxe inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] px-5 py-2.5 font-headline text-xs font-bold text-white hover:bg-[#73b74a]" data-contact-modal data-interest="Contact Sales" href="#contact-form">Contact Sales</a>
-    </div>
-  </div>
-</section>
 <!-- Capability Matrix Section -->
 <div class="mt-28 scroll-mt-28" id="plan-comparison">
 <div class="text-center max-w-3xl mx-auto mb-8">
-<span class="font-headline text-xs font-bold uppercase tracking-wider text-[#0e4b60] dark:text-[#73b74a]">PLAN SPECIFICATIONS</span>
 <h2 class="mt-2 font-headline font-bold text-3xl sm:text-4xl text-[#010101] dark:text-white tracking-tight">Pricing Plans</h2>
-<p class="mt-3 text-base text-gray-600 dark:text-gray-400">Choose with confidence. The Weekly package includes every Starter feature, with the flexibility of weekly billing.</p>
+<p class="mt-3 text-base text-gray-600 dark:text-gray-400">The Baby package includes every Starter feature, with the flexibility of weekly billing.</p>
 <p class="mt-4 flex items-center justify-center gap-1 text-xs font-semibold text-[#0e4b60] dark:text-[#73b74a] sm:hidden"><span class="material-symbols-outlined text-base">swipe</span> Swipe to compare every plan</p>
 </div>
 <!-- Comparative Table Container -->
@@ -1199,37 +1193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 </section>
-<!-- 4. HOW IT WORKS SECTION -->
-<section aria-labelledby="how-it-works-heading" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-20 sm:pb-24 pt-4 scroll-mt-28" id="how-it-works">
-  <div class="text-center mb-12">
-    <span class="font-headline text-xs font-bold uppercase tracking-wider text-[#0e4b60] dark:text-[#73b74a]">Simple setup, lasting results</span>
-    <h2 class="mt-2 font-headline font-bold text-3xl sm:text-4xl text-[#010101] dark:text-white tracking-tight" id="how-it-works-heading">How it works</h2>
-  </div>
-  <ol class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-    <li class="relative rounded-2xl bg-white dark:bg-[#161d1c] border border-gray-200 dark:border-white/10 p-7 shadow-sm">
-      <div class="flex items-center gap-4 md:block">
-        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#73b74a] text-white font-headline font-extrabold text-sm shadow-[0_0_20px_rgba(115,183,74,0.25)]">1</span>
-        <h3 class="font-headline text-lg font-medium text-[#010101] dark:text-white md:mt-5">Tell us about your business.</h3>
-      </div>
-      <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">A 20-minute chat about your most common questions.</p>
-    </li>
-    <li class="relative rounded-2xl bg-white dark:bg-[#161d1c] border border-gray-200 dark:border-white/10 p-7 shadow-sm">
-      <div class="flex items-center gap-4 md:block">
-        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] dark:bg-[#73b74a] text-white font-headline font-extrabold text-sm shadow-[0_0_20px_rgba(14,75,96,0.2)]">2</span>
-        <h3 class="font-headline text-lg font-medium text-[#010101] dark:text-white md:mt-5">We build your chatbot.</h3>
-      </div>
-      <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">Menu, answers and lead form, ready for your approval in three to five working days.</p>
-    </li>
-    <li class="relative rounded-2xl bg-white dark:bg-[#161d1c] border border-gray-200 dark:border-white/10 p-7 shadow-sm">
-      <div class="flex items-center gap-4 md:block">
-        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#73b74a] text-white font-headline font-extrabold text-sm shadow-[0_0_20px_rgba(115,183,74,0.25)]">3</span>
-        <h3 class="font-headline text-lg font-medium text-[#010101] dark:text-white md:mt-5">You approve and go live.</h3>
-      </div>
-      <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">Customers get instant replies. Each month we review what they ask and make it better.</p>
-    </li>
-  </ol>
-</section>
-<!-- 5. FAQ ACCORDION SECTION (#faq) -->
+<!-- FAQ ACCORDION SECTION (#faq) -->
 <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-20 sm:pb-28 pt-4 scroll-mt-28" id="faq" aria-labelledby="faq-heading">
 <div class="text-center mb-8">
 <h2 id="faq-heading" class="mt-2 font-headline font-semibold text-2xl sm:text-3xl text-[#010101] dark:text-white tracking-tight">FAQs</h2>
@@ -1328,7 +1292,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 </section>
-<!-- 6. LUXURY CTA SECTION: "Everything you need in one place" (#contact) -->
+<!-- ADD-ONS: OPTIONAL CAPACITY & CUSTOMISATION -->
+<section aria-labelledby="addons-title" class="mx-auto max-w-4xl scroll-mt-28 px-4 pb-20 sm:px-6 sm:pb-24 lg:px-0" id="addons">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="mt-2 font-headline text-2xl font-bold tracking-tight text-[#010101] dark:text-white sm:text-3xl" id="addons-title">Add-ons</h2>
+  </div>
+  <div class="addon-card mt-7 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-white/10 dark:bg-[#161d1c]">
+    <div class="grid gap-3 border-b border-gray-100 px-4 py-4 dark:border-white/5 sm:grid-cols-[9rem_1fr] sm:items-center sm:px-5">
+      <div>
+        <h3 class="font-headline text-base font-bold text-[#010101] dark:text-white">Messages</h3>
+        <p class="mt-0.5 text-[11px] text-gray-500 dark:text-gray-400">Top-Ups</p>
+      </div>
+      <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <div class="rounded-lg bg-gray-50 px-2.5 py-2 dark:bg-white/[0.04]"><span class="block text-[11px] font-semibold text-gray-500 dark:text-gray-400">250</span><span class="block text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">20,000 UGX</span></div>
+        <div class="rounded-lg bg-gray-50 px-2.5 py-2 dark:bg-white/[0.04]"><span class="block text-[11px] font-semibold text-gray-500 dark:text-gray-400">1,000</span><span class="block text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">50,000 UGX</span></div>
+        <div class="rounded-lg bg-gray-50 px-2.5 py-2 dark:bg-white/[0.04]"><span class="block text-[11px] font-semibold text-gray-500 dark:text-gray-400">5,000</span><span class="block text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">100,000 UGX</span></div>
+        <div class="rounded-lg bg-gray-50 px-2.5 py-2 dark:bg-white/[0.04]"><span class="block text-[11px] font-semibold text-gray-500 dark:text-gray-400">10,000</span><span class="block text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">190,000 UGX</span></div>
+      </div>
+    </div>
+    <div class="grid gap-3 border-b border-gray-100 px-4 py-4 dark:border-white/5 sm:grid-cols-[9rem_1fr] sm:items-center sm:px-5">
+      <div>
+        <h3 class="font-headline text-base font-bold text-[#010101] dark:text-white">Team Members</h3>
+        <p class="mt-0.5 text-[11px] text-gray-500 dark:text-gray-400">Per added member</p>
+      </div>
+      <div class="grid gap-2 sm:grid-cols-3">
+        <div class="flex items-center justify-between gap-2 rounded-lg bg-gray-50 px-3 py-2 dark:bg-white/[0.04]"><span class="text-[11px] font-semibold text-gray-500 dark:text-gray-400">Starter</span><span class="text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">30,000 UGX</span></div>
+        <div class="flex items-center justify-between gap-2 rounded-lg bg-gray-50 px-3 py-2 dark:bg-white/[0.04]"><span class="text-[11px] font-semibold text-gray-500 dark:text-gray-400">Business</span><span class="text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">50,000 UGX</span></div>
+        <div class="flex items-center justify-between gap-2 rounded-lg bg-gray-50 px-3 py-2 dark:bg-white/[0.04]"><span class="text-[11px] font-semibold text-gray-500 dark:text-gray-400">Enterprise</span><span class="text-xs font-extrabold text-[#0e4b60] dark:text-[#adf680]">100,000 UGX</span></div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+      <div>
+        <h3 class="font-headline text-base font-bold text-[#010101] dark:text-white">Broadcasting</h3>
+        <p class="mt-0.5 text-xs text-gray-500 dark:text-gray-400">Targeted WhatsApp broadcasts for your audience.</p>
+      </div>
+      <a class="button-luxe inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] px-5 py-2.5 font-headline text-xs font-bold text-white hover:bg-[#73b74a]" data-contact-modal data-interest="Contact Sales" href="#contact-form">Contact Sales</a>
+    </div>
+  </div>
+</section>
+<!-- LUXURY CTA SECTION: "Everything you need in one place" (#contact) -->
 <section class="w-full bg-transparent dark:bg-transparent relative overflow-hidden text-[#010101] dark:text-white py-16 lg:py-20" id="contact">
   <div class="absolute -top-24 -left-24 w-80 h-80 bg-[#73b74a]/10 rounded-full blur-[90px] pointer-events-none"></div>
   <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-[#0e4b60]/5 dark:bg-[#73b74a]/10 rounded-full blur-[90px] pointer-events-none"></div>
@@ -1752,9 +1754,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           billingNoteStarter.textContent = 'Billed annually (720k UGX/yr)';
           billingNoteBusiness.textContent = 'Billed annually (1.44M UGX/yr)';
 
-          btnAnnual.classList.add('bg-white', 'dark:bg-[#0e4b60]', 'text-[#010101]', 'dark:text-white', 'shadow-sm');
+          btnAnnual.classList.add('bg-[#0e4b60]', 'text-white', 'shadow-sm');
           btnAnnual.classList.remove('text-gray-600', 'dark:text-gray-400');
-          btnMonthly.classList.remove('bg-white', 'dark:bg-[#0e4b60]', 'text-[#010101]', 'dark:text-white', 'shadow-sm');
+          btnMonthly.classList.remove('bg-[#0e4b60]', 'text-white', 'shadow-sm');
           btnMonthly.classList.add('text-gray-600', 'dark:text-gray-400');
           btnAnnual.setAttribute('aria-pressed', 'true');
           btnMonthly.setAttribute('aria-pressed', 'false');
@@ -1766,9 +1768,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           billingNoteStarter.textContent = '';
           billingNoteBusiness.textContent = '';
 
-          btnMonthly.classList.add('bg-white', 'dark:bg-[#0e4b60]', 'text-[#010101]', 'dark:text-white', 'shadow-sm');
+          btnMonthly.classList.add('bg-[#0e4b60]', 'text-white', 'shadow-sm');
           btnMonthly.classList.remove('text-gray-600', 'dark:text-gray-400');
-          btnAnnual.classList.remove('bg-white', 'dark:bg-[#0e4b60]', 'text-[#010101]', 'dark:text-white', 'shadow-sm');
+          btnAnnual.classList.remove('bg-[#0e4b60]', 'text-white', 'shadow-sm');
           btnAnnual.classList.add('text-gray-600', 'dark:text-gray-400');
           btnMonthly.setAttribute('aria-pressed', 'true');
           btnAnnual.setAttribute('aria-pressed', 'false');
