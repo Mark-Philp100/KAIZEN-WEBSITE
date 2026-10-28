@@ -831,7 +831,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </li>
     <li class="relative rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 shadow-sm dark:border-white/10 dark:bg-[#161d1c]">
       <div class="flex items-center gap-4 md:block">
-        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] font-headline text-sm font-extrabold text-white shadow-[0_0_20px_rgba(14,75,96,0.2)] dark:bg-[#73b74a]">2</span>
+        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#73b74a] font-headline text-sm font-extrabold text-white shadow-[0_0_20px_rgba(115,183,74,0.25)]">2</span>
         <h3 class="font-headline text-lg font-medium text-[#010101] dark:text-white md:mt-5">We build your chatbot.</h3>
       </div>
       <p class="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300 sm:text-sm">Menu, answers and lead form, ready for your approval in three to five working days.</p>
@@ -1018,7 +1018,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <!-- ENTERPRISE PLAN: FULL-WIDTH FEATURED ROW -->
-<div class="enterprise-plan preserve-on-dark mx-auto mt-5 max-w-5xl rounded-2xl px-6 py-7 text-white sm:px-8 sm:py-8 md:px-9 lg:mt-6 lg:flex lg:items-center lg:justify-between lg:gap-10 lg:px-10 lg:py-9" id="enterprise-plan">
+<div class="enterprise-plan preserve-on-dark mx-auto mt-5 max-w-4xl rounded-2xl px-6 py-7 text-white sm:px-8 sm:py-8 md:px-9 lg:mt-6 lg:flex lg:items-center lg:justify-between lg:gap-10 lg:px-10 lg:py-9" id="enterprise-plan">
   <div class="w-full max-w-2xl lg:flex-1">
     <div class="flex flex-wrap items-center gap-3">
       <h3 class="font-headline text-xl font-bold sm:text-2xl" id="enterprise-plan-title">Enterprise</h3>
@@ -2052,11 +2052,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           const phone = formData.get('phone');
           if (phone) formData.set('phone', '+256 ' + String(phone).replace(/^\+?256\s*/, ''));
 
+          // Multipart FormData avoids the CORS preflight caused by JSON and reaches FormSubmit faster.
+          const submissionController = new AbortController();
+          const submissionTimeout = window.setTimeout(function () { submissionController.abort(); }, 15000);
+
           try {
             const response = await fetch(contactForm.dataset.ajaxEndpoint, {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-              body: JSON.stringify(Object.fromEntries(formData.entries()))
+              headers: { 'Accept': 'application/json' },
+              body: formData,
+              signal: submissionController.signal,
+              keepalive: true
             });
             const result = await response.json().catch(function () { return {}; });
             if (!response.ok || result.success === false || result.success === 'false') throw new Error('Submission failed');
@@ -2076,6 +2082,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             trackEvent('contact_form_error', {
               interest: formData.get('interest') || 'Not specified'
             });
+          } finally {
+            window.clearTimeout(submissionTimeout);
           }
         });
       }
