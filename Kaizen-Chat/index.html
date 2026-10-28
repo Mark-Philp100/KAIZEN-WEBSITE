@@ -762,8 +762,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="flex shrink-0 items-center gap-2 sm:gap-3">
 <!-- Interactive Theme Toggle Button -->
 <button aria-label="Toggle visual theme" class="relative p-2.5 rounded-full text-gray-600 dark:text-gray-300 bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#73b74a]" id="theme-toggle" type="button">
-<span class="material-symbols-outlined text-[20px] block dark:hidden text-[#010101]" id="theme-icon-light">dark_mode</span>
-<span class="material-symbols-outlined text-[20px] hidden dark:block text-[#73b74a]" id="theme-icon-dark">light_mode</span>
+<span class="material-symbols-outlined text-[20px] block dark:hidden text-[#2563eb]" id="theme-icon-light">dark_mode</span>
+<span class="material-symbols-outlined text-[20px] hidden dark:block text-[#2563eb]" id="theme-icon-dark">light_mode</span>
 </button>
 <a class="button-luxe nav-demo-pulse hidden sm:inline-flex lg:hidden xl:inline-flex items-center justify-center text-sm font-bold bg-[#010101] dark:bg-[#73b74a] text-white dark:text-[#0e4b60] hover:bg-[#0e4b60] dark:hover:bg-[#85c95b] hover:shadow-[0_0_20px_rgba(115,183,74,0.35)] px-5 py-2.5 rounded-xl transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
           Book Demo
@@ -1720,7 +1720,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       let savedTheme = null;
       try { savedTheme = localStorage.getItem('kaizen-theme'); } catch (error) {}
 
-      const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      // Light is the default for first-time visitors; an explicit user choice is remembered.
+      const initialTheme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'light';
       htmlEl.classList.remove('dark', 'light');
       htmlEl.classList.add(initialTheme);
 
