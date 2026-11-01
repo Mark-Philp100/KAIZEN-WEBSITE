@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="light scroll-smooth" lang="en-UG" style=""><head>
+<!DOCTYPE html><html class="light scroll-smooth" lang="en-UG"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- Google Tag Manager -->
@@ -296,12 +296,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .button-luxe:not(.rounded-full) { border-radius: 1.25rem !important; }
     .button-luxe .material-symbols-outlined { transition: transform .4s var(--ease-luxe); }
     .button-luxe:hover .material-symbols-outlined { transform: translateX(4px); }
+    .arrow-reveal .button-arrow {
+      display: inline-flex;
+      flex-shrink: 0;
+      width: 0;
+      margin-left: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateX(-6px);
+      transition: width .35s var(--ease-luxe), margin-left .35s var(--ease-luxe), opacity .25s ease, transform .35s var(--ease-luxe);
+    }
+    .arrow-reveal:hover .button-arrow,
+    .arrow-reveal:focus-visible .button-arrow {
+      width: 1.25rem;
+      margin-left: .5rem;
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     @keyframes nav-demo-pulse {
       0%, 100% { box-shadow: 0 0 0 0 rgba(115, 183, 74, 0); }
-      50% { box-shadow: 0 0 0 7px rgba(115, 183, 74, .2); }
+      50% { box-shadow: 0 0 0 9px rgba(115, 183, 74, .32); }
     }
-    .nav-demo-pulse { animation: nav-demo-pulse 2.8s ease-in-out infinite; }
+    .nav-demo-pulse { animation: nav-demo-pulse 2.4s ease-in-out infinite; }
 
     .swoosh-underline {
       position: relative;
@@ -773,7 +790,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="material-symbols-outlined text-[20px] block dark:hidden text-[#2563eb]" id="theme-icon-light">dark_mode</span>
 <span class="material-symbols-outlined text-[20px] hidden dark:block text-[#2563eb]" id="theme-icon-dark">light_mode</span>
 </button>
-<a class="button-luxe nav-demo-pulse hidden sm:inline-flex lg:hidden xl:inline-flex items-center justify-center text-sm font-bold bg-[#010101] dark:bg-[#73b74a] text-white dark:text-[#0e4b60] hover:bg-[#0e4b60] dark:hover:bg-[#85c95b] hover:shadow-[0_0_20px_rgba(115,183,74,0.35)] px-5 py-2.5 rounded-xl transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
+<a class="button-luxe nav-demo-pulse hidden sm:inline-flex lg:hidden xl:inline-flex items-center justify-center text-sm font-bold bg-[#0e4b60] dark:bg-[#0e4b60] text-white dark:text-white hover:bg-[#73b74a] dark:hover:bg-[#73b74a] hover:text-white dark:hover:text-white px-5 py-2.5 rounded-xl transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
           Book Demo
         </a>
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-white text-[#0e4b60] shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-[#73b74a]" id="mobile-menu-button" type="button">
@@ -809,7 +826,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="whitespace-nowrap text-[10px] sm:text-xs font-bold tracking-[0.08em] sm:tracking-widest uppercase text-gray-700 dark:text-gray-200 font-headline">OFFICIAL WHATSAPP PARTNER</span>
 </div>
 <!-- Main Headline -->
-<h1 class="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-[#010101] dark:text-white max-w-4xl mx-auto leading-[1.12]">
+<h1 class="font-display font-semibold text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight text-[#010101] dark:text-white max-w-4xl mx-auto leading-[1.12]">
           Never miss a <span class="swoosh-underline text-[#0e4b60] dark:text-white">customer message</span> again.
 </h1>
 <!-- Subtitle -->
@@ -888,7 +905,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- 3. PLANS SECTION: PRIMARY CARDS & CAPABILITY MATRIX (#plans) -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-20 sm:pb-24" id="plans">
 <!-- Primary Pricing Cards -->
-<div class="mx-auto grid max-w-4xl grid-cols-1 gap-5 items-stretch pt-2 scroll-mt-28 md:grid-cols-2 md:gap-5 lg:gap-6" id="pricing-options">
+<div class="mx-auto grid max-w-6xl grid-cols-1 gap-5 items-stretch pt-2 scroll-mt-28 md:grid-cols-3 md:gap-4 lg:gap-6" id="pricing-options">
 <!-- CARD 1: STARTER -->
 <div class="pricing-card flex flex-col justify-between rounded-2xl bg-white dark:bg-[#161d1c] border border-gray-200 dark:border-white/10 p-6 sm:p-7 shadow-sm hover:shadow-md transition-all duration-300">
   <div>
@@ -989,11 +1006,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="space-y-3">
         <div class="flex items-start gap-2.5">
           <span class="material-symbols-outlined text-[#73b74a] text-[18px] shrink-0 mt-0.5 font-bold">check_circle</span>
-          <span class="text-sm text-gray-700 dark:text-gray-200 font-medium">1 WhatsApp Business Numbers with shared inbox</span>
+          <span class="text-sm font-normal text-gray-600 dark:text-gray-300">1 WhatsApp Business Numbers with shared inbox</span>
         </div>
         <div class="flex items-start gap-2.5">
           <span class="material-symbols-outlined text-[#73b74a] text-[18px] shrink-0 mt-0.5 font-bold">check_circle</span>
-          <span class="text-sm text-gray-700 dark:text-gray-200 font-medium">Up to 5,000 messages / mo</span>
+          <span class="text-sm font-normal text-gray-600 dark:text-gray-300">Up to 5,000 messages / mo</span>
         </div>
         <div class="flex items-start gap-2.5">
           <span class="material-symbols-outlined text-[#73b74a] text-[18px] shrink-0 mt-0.5 font-bold">check_circle</span>
@@ -1009,17 +1026,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <div class="flex items-start gap-2.5">
           <span class="material-symbols-outlined text-[#73b74a] text-[18px] shrink-0 mt-0.5 font-bold">check_circle</span>
-          <span class="text-sm text-gray-700 dark:text-gray-200 font-medium">Priority WhatsApp Live Support</span>
+          <span class="text-sm font-normal text-gray-600 dark:text-gray-300">Priority WhatsApp Live Support</span>
         </div>
       </div>
     </div>
   </div>
 </div>
-</div>
 
-<!-- ENTERPRISE PLAN: FULL-WIDTH FEATURED ROW -->
-<div class="enterprise-plan preserve-on-dark mx-auto mt-5 max-w-4xl rounded-2xl px-6 py-7 text-white sm:px-8 sm:py-8 md:px-9 lg:mt-6 lg:flex lg:items-center lg:justify-between lg:gap-10 lg:px-10 lg:py-9" id="enterprise-plan">
-  <div class="w-full max-w-2xl lg:flex-1">
+<!-- CARD 3: ENTERPRISE -->
+<div class="enterprise-plan preserve-on-dark flex flex-col justify-between rounded-2xl p-6 text-white sm:p-7" id="enterprise-plan">
+  <div class="flex h-full w-full flex-col">
     <div class="flex flex-wrap items-center gap-3">
       <h3 class="font-headline text-xl font-bold sm:text-2xl" id="enterprise-plan-title">Enterprise</h3>
     </div>
@@ -1027,12 +1043,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="swoosh-underline font-display text-lg font-semibold tracking-tight sm:text-xl">Tailored</span>
       <span class="text-sm text-white/70">to your scale</span>
     </div>
-    <p class="mt-4 max-w-xl text-sm leading-relaxed text-white/75">A custom solution for complex, high-volume operations that need advanced integrations, stronger controls, and hands-on support.</p>
+    <a class="button-luxe arrow-reveal mt-7 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-white px-6 py-3.5 font-headline text-sm font-bold text-[#0e4b60] shadow-[0_14px_35px_rgba(0,0,0,0.18)] hover:bg-[#73b74a] hover:text-white hover:shadow-[0_0_24px_rgba(115,183,74,0.42)]" data-contact-modal data-interest="Contact Sales" href="#contact-form">
+      <span>Contact Sales</span>
+      <span class="button-arrow material-symbols-outlined text-[19px]">arrow_forward</span>
+    </a>
+    <p class="mt-auto max-w-xl pt-8 text-sm leading-relaxed text-white/75">A custom solution for complex, high-volume operations that need advanced integrations, stronger controls, and hands-on support.</p>
   </div>
-  <a class="button-luxe mt-7 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-white px-8 py-3.5 font-headline text-sm font-bold text-[#0e4b60] shadow-[0_14px_35px_rgba(0,0,0,0.18)] hover:bg-[#73b74a] hover:text-white hover:shadow-[0_0_24px_rgba(115,183,74,0.42)] md:w-auto md:min-w-[200px] md:self-start md:px-8 md:py-3.5 md:text-sm lg:mt-0 lg:min-w-[220px] lg:self-auto" data-contact-modal data-interest="Contact Sales" href="#contact-form">
-    <span>Contact Sales</span>
-    <span class="material-symbols-outlined text-[19px]">arrow_forward</span>
-  </a>
+</div>
 </div>
 
 <!-- Capability Matrix Section -->
@@ -1318,9 +1335,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       Your customers are already on WhatsApp. Let’s make sure someone answers.
     </p>
     <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-      <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 px-9 rounded-full font-headline font-extrabold text-base bg-[#73b74a] text-[#0e4b60] shadow-[0_0_30px_rgba(115,183,74,0.4)] hover:bg-[#85c95b] hover:shadow-[0_0_40px_rgba(115,183,74,0.6)] hover:scale-105 transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
+      <a class="arrow-reveal w-full sm:w-auto inline-flex items-center justify-center py-4 px-9 rounded-full font-headline font-extrabold text-base bg-[#73b74a] text-[#0e4b60] shadow-[0_0_30px_rgba(115,183,74,0.4)] hover:bg-[#85c95b] hover:shadow-[0_0_40px_rgba(115,183,74,0.6)] hover:scale-105 transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
         <span class="">Book Demo</span>
-        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+        <span class="button-arrow material-symbols-outlined text-[20px]">arrow_forward</span>
       </a>
     </div>
     <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400 text-xs font-medium">
@@ -1354,9 +1371,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a class="inline-flex items-center gap-2 transition-colors hover:text-[#adf680]" href="tel:+256755806491"><span class="material-symbols-outlined text-[18px]">call</span>+256 755806491</a>
         </div>
         <div aria-label="Kaizen Chat on social media" class="mt-8 flex items-center justify-center gap-3 md:justify-start">
-          <span aria-label="X" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="X">
-            <svg aria-hidden="true" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
-          </span>
           <span aria-label="Instagram" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="Instagram">
             <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><rect height="17" rx="5" width="17" x="3.5" y="3.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.7" fill="currentColor" r="1" stroke="none"/></svg>
           </span>
@@ -1365,9 +1379,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </span>
           <span aria-label="TikTok" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="TikTok">
             <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 3c.3 2.5 1.7 4 4.5 4.2v3.1a9.4 9.4 0 0 1-4.5-1.1v6.2a6.1 6.1 0 1 1-5.3-6v3.2a3 3 0 1 0 2.1 2.8V3h3.2Z"/></svg>
-          </span>
-          <span aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="LinkedIn">
-            <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M5.4 7.8H2.2V22h3.2V7.8ZM3.8 2A1.9 1.9 0 1 0 3.8 5.8 1.9 1.9 0 0 0 3.8 2ZM22 13.9c0-4.3-2.3-6.3-5.4-6.3a4.7 4.7 0 0 0-4.2 2.3V7.8H9.2V22h3.2v-7c0-1.8.4-3.6 2.7-3.6 2.3 0 2.3 2.1 2.3 3.7V22H22v-8.1Z"/></svg>
           </span>
         </div>
       </div>
@@ -1595,9 +1606,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <input class="mt-0.5 rounded border-gray-300 text-[#73b74a] focus:ring-[#73b74a]" name="consent" required type="checkbox" value="Agreed">
             <span>I agree that Kaizen Chat may use these details to respond to my enquiry.</span>
           </label>
-          <button class="mx-auto flex min-h-12 w-fit items-center justify-center gap-2 rounded-xl bg-[#73b74a] px-8 py-3 font-headline text-sm font-extrabold text-white shadow-[0_0_24px_rgba(115,183,74,0.3)] transition-all hover:bg-[#85c95b] focus:outline-none focus:ring-2 focus:ring-[#73b74a] focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60" id="contact-submit" type="submit">
+          <button class="arrow-reveal mx-auto flex min-h-12 w-fit items-center justify-center rounded-xl bg-[#73b74a] px-8 py-3 font-headline text-sm font-extrabold text-white shadow-[0_0_24px_rgba(115,183,74,0.3)] transition-all hover:bg-[#85c95b] focus:outline-none focus:ring-2 focus:ring-[#73b74a] focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60" id="contact-submit" type="submit">
             <span id="contact-submit-label">Send enquiry</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            <span class="button-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
           </button>
           <p class="hidden text-center text-xs font-semibold text-red-600 dark:text-red-400" id="contact-form-error" role="alert">We couldn&rsquo;t send your enquiry. Please try again or email sales@kaizensuppliesltd.com directly.</p>
         </form>
