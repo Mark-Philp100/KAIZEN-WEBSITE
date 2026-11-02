@@ -93,7 +93,7 @@
   gap: 20px;
   min-height: 34px;
   padding: 7px 10px;
-  color: #34482b !important;
+  color: #000000 !important;
   font-family: Montserrat, sans-serif;
   font-size: 11px;
   font-weight: 400;
@@ -101,6 +101,7 @@
   letter-spacing: 0.06em;
   text-decoration: none;
   text-transform: uppercase;
+  background: #ffffff;
   border-radius: 10px;
   border-bottom: 1px solid rgba(67, 83, 52, 0.12);
   transition: color 220ms ease, background-color 220ms ease, padding-left 220ms ease;
@@ -115,7 +116,6 @@
   width: 10px;
   height: 10px;
   flex: 0 0 10px;
-  color: #6f6845;
   border-top: 1.5px solid currentColor;
   border-right: 1.5px solid currentColor;
   background: linear-gradient(
@@ -129,10 +129,11 @@
 }
 
 .project-link:hover,
-.project-link:focus-visible {
+.project-link:focus-visible,
+.project-link:active {
   padding-left: 14px;
-  color: #6f6845 !important;
-  background: #d8d0ad;
+  color: #ffffff !important;
+  background: #435334;
   outline: none;
 }
 

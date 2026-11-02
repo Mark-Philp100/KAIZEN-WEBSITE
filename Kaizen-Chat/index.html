@@ -296,6 +296,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .button-luxe:not(.rounded-full) { border-radius: 1.25rem !important; }
     .button-luxe .material-symbols-outlined { transition: transform .4s var(--ease-luxe); }
     .button-luxe:hover .material-symbols-outlined { transform: translateX(4px); }
+    .fill-up {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    .fill-up::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      border-radius: inherit;
+      background: #73b74a;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform .5s var(--ease-luxe);
+    }
+    .fill-up:hover::after,
+    .fill-up:focus-visible::after {
+      transform: scaleY(1);
+    }
     .arrow-reveal .button-arrow {
       display: inline-flex;
       flex-shrink: 0;
@@ -346,6 +366,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .enterprise-plan .swoosh-underline::after {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 18' preserveAspectRatio='none'%3E%3Cpath d='M3 12C62 6 151 5 238 8C174 8 88 10 14 14C9 14 5 13 3 12Z' fill='%2373b74a'/%3E%3Cpath d='M22 13C76 9 139 7 196 8' fill='none' stroke='%23adf680' stroke-width='1.2' stroke-linecap='round' opacity='.75'/%3E%3C/svg%3E");
+    }
+    .enterprise-scale-label { transform: translateY(-2rem); }
+    .enterprise-cta-content { transform: translateY(-1.5rem); }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .enterprise-scale-label { transform: translateY(-3.25rem); }
+    }
+
+    @media (min-width: 1024px) {
+      .enterprise-scale-label { transform: translateY(-3rem); }
+      .enterprise-cta-content { transform: translateY(-.25rem); }
     }
 
     .pricing-card {
@@ -790,7 +821,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="material-symbols-outlined text-[20px] block dark:hidden text-[#2563eb]" id="theme-icon-light">dark_mode</span>
 <span class="material-symbols-outlined text-[20px] hidden dark:block text-[#2563eb]" id="theme-icon-dark">light_mode</span>
 </button>
-<a class="button-luxe nav-demo-pulse hidden sm:inline-flex lg:hidden xl:inline-flex items-center justify-center text-sm font-bold bg-[#0e4b60] dark:bg-[#0e4b60] text-white dark:text-white hover:bg-[#73b74a] dark:hover:bg-[#73b74a] hover:text-white dark:hover:text-white px-5 py-2.5 rounded-xl transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
+<a class="button-luxe fill-up nav-demo-pulse hidden sm:inline-flex lg:hidden xl:inline-flex items-center justify-center text-sm font-bold bg-[#0e4b60] dark:bg-[#0e4b60] text-white dark:text-white hover:text-white dark:hover:text-white px-5 py-2.5 rounded-xl transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
           Book Demo
         </a>
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-white text-[#0e4b60] shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-[#73b74a]" id="mobile-menu-button" type="button">
@@ -912,7 +943,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Plan Name & Description -->
     <div>
       <h3 class="font-headline font-bold text-xl text-[#010101] dark:text-white">Starter</h3>
-      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 min-h-[40px] leading-relaxed md:min-h-[120px] lg:min-h-[80px]">
+      <p class="mt-3 text-sm text-gray-500 dark:text-gray-400 min-h-[40px] leading-relaxed md:min-h-[84px] lg:min-h-[80px]">
         Turn everyday enquiries into instant, consistent replies while your team stays focused on the work that matters.
       </p>
     </div>
@@ -928,7 +959,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <!-- CTA Button directly under price -->
-    <a class="w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-headline font-bold text-sm bg-[#0e4b60] text-white hover:bg-[#73b74a] hover:shadow-[0_0_22px_rgba(115,183,74,0.35)] transition-all shadow-sm" href="#contact">
+    <a class="fill-up w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-headline font-bold text-sm bg-[#0e4b60] text-white hover:shadow-[0_0_22px_rgba(115,183,74,0.35)] transition-all shadow-sm" href="#contact">
       Get started
     </a>
 
@@ -978,7 +1009,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           Popular
         </span>
       </div>
-      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 min-h-[40px] leading-relaxed md:min-h-[120px] lg:min-h-[80px]">
+      <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 min-h-[40px] leading-relaxed md:min-h-[84px] lg:min-h-[80px]">
         Give a growing team more capacity, smarter workflows, and connected tools for faster customer service at scale.
       </p>
     </div>
@@ -994,7 +1025,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <!-- CTA Button directly under price -->
-    <a class="w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-headline font-extrabold text-sm bg-[#0e4b60] text-white hover:bg-[#73b74a] hover:shadow-[0_0_22px_rgba(115,183,74,0.35)] shadow-sm transition-all" href="#contact">
+    <a class="fill-up w-full inline-flex items-center justify-center py-3 px-6 rounded-xl font-headline font-extrabold text-sm bg-[#0e4b60] text-white hover:shadow-[0_0_22px_rgba(115,183,74,0.35)] shadow-sm transition-all" href="#contact">
       Get started
     </a>
 
@@ -1038,16 +1069,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="flex h-full w-full flex-col">
     <div>
       <h3 class="font-headline text-xl font-bold" id="enterprise-plan-title">Enterprise</h3>
-      <p class="mt-2 min-h-[40px] text-sm leading-relaxed text-white/75 md:min-h-[120px] lg:min-h-[80px]">A custom solution for complex, high-volume operations that need advanced integrations, stronger controls, and hands-on support.</p>
+      <div aria-hidden="true" class="mt-3 min-h-[40px] md:min-h-[84px] lg:min-h-[80px]"></div>
     </div>
-    <div class="mt-6 mb-5 flex min-h-[40px] items-baseline gap-2">
-      <span class="swoosh-underline font-display text-lg font-semibold tracking-tight sm:text-xl">Tailored</span>
-      <span class="text-sm text-white/70">to your scale</span>
+    <div class="enterprise-scale-label mt-6 mb-5 flex min-h-[40px] items-baseline gap-2">
+      <span class="swoosh-underline font-display text-2xl font-extrabold tracking-tight">Tailored</span>
+      <span class="text-base font-semibold text-white/80">to your scale</span>
     </div>
-    <a class="button-luxe arrow-reveal inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3 font-headline text-sm font-bold text-[#0e4b60] shadow-[0_14px_35px_rgba(0,0,0,0.18)] hover:bg-[#73b74a] hover:text-white hover:shadow-[0_0_24px_rgba(115,183,74,0.42)]" data-contact-modal data-interest="Contact Sales" href="#contact-form">
-      <span>Contact Sales</span>
-      <span class="button-arrow material-symbols-outlined text-[19px]">arrow_forward</span>
-    </a>
+    <div class="enterprise-cta-content">
+      <a class="button-luxe arrow-reveal inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3 font-headline text-sm font-bold text-[#0e4b60] shadow-[0_14px_35px_rgba(0,0,0,0.18)] hover:bg-[#73b74a] hover:text-white hover:shadow-[0_0_24px_rgba(115,183,74,0.42)]" data-contact-modal data-interest="Contact Sales" href="#contact-form">
+        <span>Contact Sales</span>
+        <span class="button-arrow material-symbols-outlined text-[19px]">arrow_forward</span>
+      </a>
+      <div class="mt-6 border-t border-white/15 pt-5">
+        <p class="text-base font-medium leading-relaxed text-white/85">A custom solution for complex,<br class="hidden lg:block"> <span class="whitespace-nowrap">high-volume</span> operations that need advanced integrations, stronger controls, and hands-on support.</p>
+      </div>
+    </div>
   </div>
 </div>
 </div>
@@ -1316,7 +1352,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h3 class="font-headline text-base font-bold text-[#010101] dark:text-white">Broadcasting</h3>
         <p class="mt-0.5 text-xs text-gray-500 dark:text-gray-400">Targeted WhatsApp broadcasts for your audience.</p>
       </div>
-      <a class="button-luxe inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] px-5 py-2.5 font-headline text-xs font-bold text-white hover:bg-[#73b74a]" data-contact-modal data-interest="Contact Sales" href="#contact-form">Contact Sales</a>
+      <a class="button-luxe arrow-reveal inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] px-5 py-2.5 font-headline text-xs font-bold text-white hover:bg-[#73b74a]" data-contact-modal data-interest="Contact Sales" href="#contact-form">
+        <span>Contact Sales</span>
+        <span class="button-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
     </div>
   </div>
 </section>
