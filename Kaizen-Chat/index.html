@@ -662,7 +662,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .faq-trigger { font-size: .95rem !important; line-height: 1.35; }
     .faq-content { font-size: .825rem !important; }
     .faq-trigger, .faq-content { color: #0e4b60 !important; }
-    .dark .faq-trigger, .dark .faq-content { color: #87bad3 !important; }
+    .dark .faq-trigger, .dark .faq-content { color: #ffffff !important; }
     .faq-card.is-open { border-color: rgba(115,183,74,.5); box-shadow: 0 18px 45px rgba(14,75,96,.08); }
     .faq-content {
       display: block !important;
@@ -1078,7 +1078,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="enterprise-cta-content">
       <a class="button-luxe arrow-reveal inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3 font-headline text-sm font-bold text-[#0e4b60] shadow-[0_14px_35px_rgba(0,0,0,0.18)] hover:bg-[#73b74a] hover:text-white hover:shadow-[0_0_24px_rgba(115,183,74,0.42)]" data-contact-modal data-interest="Contact Sales" href="#contact-form">
         <span>Contact Sales</span>
-        <span class="button-arrow material-symbols-outlined text-[19px]">arrow_forward</span>
+        <span aria-hidden="true" class="button-arrow material-symbols-outlined text-[19px]">chevron_right</span>
       </a>
       <div class="mt-6 border-t border-white/15 pt-5">
         <p class="text-base font-medium leading-relaxed text-white/85">A custom solution for complex,<br class="hidden lg:block"> <span class="whitespace-nowrap">high-volume</span> operations that need advanced integrations, stronger controls, and hands-on support.</p>
@@ -1354,7 +1354,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       <a class="button-luxe arrow-reveal inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl bg-[#0e4b60] px-5 py-2.5 font-headline text-xs font-bold text-white hover:bg-[#73b74a]" data-contact-modal data-interest="Contact Sales" href="#contact-form">
         <span>Contact Sales</span>
-        <span class="button-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
+        <span aria-hidden="true" class="button-arrow material-symbols-outlined text-[18px]">chevron_right</span>
       </a>
     </div>
   </div>
@@ -1376,7 +1376,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
       <a class="arrow-reveal w-full sm:w-auto inline-flex items-center justify-center py-4 px-9 rounded-full font-headline font-extrabold text-base bg-[#73b74a] text-[#0e4b60] shadow-[0_0_30px_rgba(115,183,74,0.4)] hover:bg-[#85c95b] hover:shadow-[0_0_40px_rgba(115,183,74,0.6)] hover:scale-105 transition-all duration-200" data-contact-modal data-interest="Book a Demo" href="#contact-form">
         <span class="">Book Demo</span>
-        <span class="button-arrow material-symbols-outlined text-[20px]">arrow_forward</span>
+        <span aria-hidden="true" class="button-arrow material-symbols-outlined text-[20px]">chevron_right</span>
       </a>
     </div>
     <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400 text-xs font-medium">
@@ -1590,6 +1590,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <form action="https://formsubmit.co/sales@kaizensuppliesltd.com" class="mt-4 space-y-3" data-ajax-endpoint="https://formsubmit.co/ajax/sales@kaizensuppliesltd.com" id="contact-form" method="POST">
           <input name="_subject" type="hidden" value="New Kaizen Chat website enquiry">
           <input name="_template" type="hidden" value="table">
+          <input name="_url" type="hidden" value="https://www.kaizensuppliesltd.com/Kaizen-Chat/">
           <div aria-hidden="true" class="hidden">
             <label for="contact-website">Leave this field empty</label>
             <input autocomplete="off" id="contact-website" name="_honey" tabindex="-1" type="text">
@@ -1647,7 +1648,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </label>
           <button class="arrow-reveal mx-auto flex min-h-12 w-fit items-center justify-center rounded-xl bg-[#73b74a] px-8 py-3 font-headline text-sm font-extrabold text-white shadow-[0_0_24px_rgba(115,183,74,0.3)] transition-all hover:bg-[#85c95b] focus:outline-none focus:ring-2 focus:ring-[#73b74a] focus:ring-offset-2 disabled:cursor-wait disabled:opacity-60" id="contact-submit" type="submit">
             <span id="contact-submit-label">Send enquiry</span>
-            <span class="button-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
+            <span aria-hidden="true" class="button-arrow material-symbols-outlined text-[18px]">chevron_right</span>
           </button>
           <p class="hidden text-center text-xs font-semibold text-red-600 dark:text-red-400" id="contact-form-error" role="alert">We couldn&rsquo;t send your enquiry. Please try again or email sales@kaizensuppliesltd.com directly.</p>
         </form>
@@ -2096,26 +2097,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           if (contactFormError) contactFormError.classList.add('hidden');
           if (contactSubmit) contactSubmit.disabled = true;
-          if (contactSubmitLabel) contactSubmitLabel.textContent = 'Sending...';
 
           const formData = new FormData(contactForm);
           const phone = formData.get('phone');
           if (phone) formData.set('phone', '+256 ' + String(phone).replace(/^\+?256\s*/, ''));
 
-          // Multipart FormData avoids the CORS preflight caused by JSON and reaches FormSubmit faster.
-          const submissionController = new AbortController();
-          const submissionTimeout = window.setTimeout(function () { submissionController.abort(); }, 15000);
+          const submissionData = {};
+          formData.forEach(function (value, key) {
+            submissionData[key] = value;
+          });
 
           try {
             const response = await fetch(contactForm.dataset.ajaxEndpoint, {
               method: 'POST',
-              headers: { 'Accept': 'application/json' },
-              body: formData,
-              signal: submissionController.signal,
-              keepalive: true
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(submissionData)
             });
             const result = await response.json().catch(function () { return {}; });
-            if (!response.ok || result.success === false || result.success === 'false') throw new Error('Submission failed');
+            if (!response.ok || result.success === false || result.success === 'false') {
+              throw new Error(result.message || 'Submission failed');
+            }
 
             contactFormContent.classList.add('hidden');
             contactFormSuccess.classList.remove('hidden');
@@ -2132,8 +2136,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             trackEvent('contact_form_error', {
               interest: formData.get('interest') || 'Not specified'
             });
-          } finally {
-            window.clearTimeout(submissionTimeout);
           }
         });
       }
