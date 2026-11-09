@@ -427,8 +427,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border-color: rgba(115,183,74,.45);
       box-shadow: 0 20px 45px rgba(14,75,96,.1);
     }
-    footer [role="img"] { transition: transform .4s var(--ease-luxe), border-color .3s ease, background-color .3s ease; }
-    footer [role="img"]:hover { transform: translateY(-4px) rotate(-3deg); border-color: rgba(173,246,128,.55); background: rgba(255,255,255,.12); }
+    .social-icon { transition: transform .4s var(--ease-luxe), border-color .3s ease, background-color .3s ease, box-shadow .35s ease, color .3s ease; }
+    .social-icon:hover,
+    .social-icon:focus-visible {
+      transform: translateY(-4px) rotate(-3deg);
+      border-color: rgba(173,246,128,.7);
+      background: rgba(255,255,255,.12);
+      color: #adf680;
+      box-shadow: 0 8px 24px rgba(115,183,74,.3), 0 0 16px rgba(173,246,128,.22);
+    }
     .footer-main li a {
       display: block;
       padding: .6rem .75rem;
@@ -1410,16 +1417,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a class="inline-flex items-center gap-2 transition-colors hover:text-[#adf680]" href="tel:+256755806491"><span class="material-symbols-outlined text-[18px]">call</span>+256 755806491</a>
         </div>
         <div aria-label="Kaizen Chat on social media" class="mt-8 flex items-center justify-center gap-3 md:justify-start">
-          <span aria-label="Instagram" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="Instagram">
+          <span aria-label="Instagram" class="social-icon inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="Instagram">
             <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><rect height="17" rx="5" width="17" x="3.5" y="3.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.7" fill="currentColor" r="1" stroke="none"/></svg>
           </span>
-          <span aria-label="YouTube" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="YouTube">
+          <span aria-label="YouTube" class="social-icon inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="YouTube">
             <svg aria-hidden="true" class="h-5 w-5" fill="none" viewBox="0 0 24 24"><rect height="14" rx="4" stroke="currentColor" stroke-width="1.9" width="20" x="2" y="5"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></svg>
           </span>
-          <span aria-label="TikTok" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="TikTok">
+          <span aria-label="TikTok" class="social-icon inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" role="img" title="TikTok">
             <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 3c.3 2.5 1.7 4 4.5 4.2v3.1a9.4 9.4 0 0 1-4.5-1.1v6.2a6.1 6.1 0 1 1-5.3-6v3.2a3 3 0 1 0 2.1 2.8V3h3.2Z"/></svg>
           </span>
-          <a aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-colors hover:border-[#adf680]/50 hover:text-[#adf680]" href="https://www.linkedin.com/company/105078598/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+          <a aria-label="LinkedIn" class="social-icon inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white" href="https://www.linkedin.com/company/105078598/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
             <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.5 8.3H3.2V21h3.3V8.3ZM4.8 3A1.9 1.9 0 1 0 4.8 6.8 1.9 1.9 0 0 0 4.8 3ZM21 13.7c0-3.8-2-5.6-4.7-5.6-2.2 0-3.1 1.2-3.7 2V8.3H9.3V21h3.3v-6.3c0-1.7.3-3.3 2.4-3.3 2 0 2 1.9 2 3.4V21h3.3l.7-7.3Z"/></svg>
           </a>
         </div>
