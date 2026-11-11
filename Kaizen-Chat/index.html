@@ -118,7 +118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "geographicArea": {"@type": "Country", "name": "Uganda"}
       },
       "offers": [
-        {"@type": "Offer", "name": "Starter Plan", "price": "75000", "priceCurrency": "UGX", "description": "UGX 75,000 per month", "url": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#pricing-options", "availability": "https://schema.org/InStock"},
+        {"@type": "Offer", "name": "Starter Plan", "price": "75900", "priceCurrency": "UGX", "description": "UGX 75,900 per month", "url": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#pricing-options", "availability": "https://schema.org/InStock"},
         {"@type": "Offer", "name": "Business Plan", "price": "150000", "priceCurrency": "UGX", "description": "UGX 150,000 per month", "url": "https://www.kaizensuppliesltd.com/Kaizen-Chat/#pricing-options", "availability": "https://schema.org/InStock"}
       ],
       "featureList": [
@@ -958,7 +958,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Price Display -->
     <div class="mt-6 mb-5">
       <div class="flex flex-nowrap items-baseline gap-1">
-        <span class="font-display font-extrabold text-3xl text-[#010101] dark:text-white tracking-tight" id="price-starter">75,000</span>
+        <span class="font-display font-extrabold text-3xl text-[#010101] dark:text-white tracking-tight" id="price-starter">75,900</span>
         <span class="text-sm font-semibold text-gray-600 dark:text-gray-400">UGX</span>
         <span class="ml-1 whitespace-nowrap text-xs text-gray-500 dark:text-gray-400 font-medium" id="cadence-starter">/mo</span>
       </div>
@@ -1110,7 +1110,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <th class="py-5 px-6 font-headline font-bold text-base w-2/5">Features &amp; Capabilities</th>
 <th class="py-5 px-4 font-headline font-bold text-sm w-1/5 text-center">
 <span class="block">Starter</span>
-<span class="font-body text-xs text-gray-500 dark:text-gray-400">75,000 UGX</span>
+<span class="font-body text-xs text-gray-500 dark:text-gray-400">75,900 UGX</span>
 </th>
 <th class="py-5 px-4 font-headline font-bold text-sm w-1/5 text-center bg-[#0e4b60]/10 dark:bg-[#0e4b60]/40 border-x border-[#0e4b60]/20">
 <span class="block text-[#0e4b60] dark:text-[#87bad3] font-extrabold">Business</span>
@@ -1597,7 +1597,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="contact-form-content">
         <h2 class="font-display text-xl font-extrabold text-[#010101] dark:text-white" id="contact-form-title">Book Consultation</h2>
         <p class="mt-1.5 text-xs text-gray-600 dark:text-gray-300">Complete the form and we&rsquo;ll get back to you Immediately.</p>
-        <form action="contact.php" class="mt-4 space-y-3" id="contact-form" method="POST">
+        <form action="https://formsubmit.co/ajax/sales@kaizensuppliesltd.com" class="mt-4 space-y-3" id="contact-form" method="POST">
+          <input name="_captcha" type="hidden" value="false">
           <input name="_subject" type="hidden" value="New Kaizen Chat website enquiry">
           <input name="_template" type="hidden" value="table">
           <input name="_url" type="hidden" value="https://www.kaizensuppliesltd.com/Kaizen-Chat/">
@@ -1794,7 +1795,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           btnAnnual.setAttribute('aria-pressed', 'true');
           btnMonthly.setAttribute('aria-pressed', 'false');
         } else {
-          priceStarter.textContent = '75,000';
+          priceStarter.textContent = '75,900';
           priceBusiness.textContent = '150,000';
           cadenceStarter.textContent = '/mo';
           cadenceBusiness.textContent = '/mo';
@@ -2107,6 +2108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           if (contactFormError) contactFormError.classList.add('hidden');
           if (contactSubmit) contactSubmit.disabled = true;
+          if (contactSubmitLabel) contactSubmitLabel.textContent = 'Sending...';
 
           const formData = new FormData(contactForm);
           const phone = formData.get('phone');
@@ -2121,7 +2123,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               body: formData
             });
             const result = await response.json().catch(function () { return {}; });
-            if (!response.ok || result.success === false || result.success === 'false') {
+            const wasAccepted = result.success === true || result.success === 'true';
+            if (!response.ok || !wasAccepted) {
               throw new Error(result.message || 'Submission failed');
             }
 

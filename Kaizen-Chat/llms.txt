@@ -16,7 +16,7 @@
 - Primary market: Businesses in Uganda
 - Core capabilities: instant approved replies, lead and enquiry capture, official WhatsApp Business number support, shared team inboxes, quick replies, catalogue tagging and business app integrations
 - Baby plan: UGX 20,000 per week
-- Starter plan: UGX 75,000 per month
+- Starter plan: UGX 75,900 per month
 - Business plan: UGX 150,000 per month
 - Enterprise plan: tailored pricing
 - Setup time: approximately three to five working days after the required business information is supplied
