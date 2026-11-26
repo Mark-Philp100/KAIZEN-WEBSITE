@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#22356A">
+  <meta name="description" content="Union Regional Festival">
+  <title>Union | Regional Festival</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#22356A; --cyan:#08BCE2; --white:#fff; --ink:#14234e; --soft:#edf8fc; --ease:cubic-bezier(.22,.8,.24,1); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; background:var(--navy); }
+    body { margin:0; overflow-x:hidden; color:var(--navy); font-family:Montserrat,Arial,sans-serif; background:var(--white); }
+    a { font:inherit; touch-action:manipulation; }
+    .hero { position:relative; display:grid; min-height:100svh; place-items:end center; padding:80px clamp(20px,6vw,80px) max(42px,env(safe-area-inset-bottom)); overflow:hidden; color:var(--white); background:var(--navy); isolation:isolate; }
+    .hero::before { position:absolute; z-index:-2; inset:0; background:linear-gradient(180deg,rgba(18,37,92,.26),rgba(18,37,92,.86)),url('./union-festival-hero.webp') center/cover no-repeat; content:""; animation:hero-enter 1.1s var(--ease) both; }
+    .hero::after { position:absolute; z-index:-1; inset:auto -15% -6rem auto; width:min(78vw,680px); aspect-ratio:1; border:1px solid rgba(8,188,226,.75); border-radius:50%; content:""; }
+    @keyframes hero-enter { from { transform:scale(1.05); opacity:.2; } to { transform:scale(1); opacity:1; } }
+    .hero-content { width:min(100%,1100px); text-align:center; animation:rise .75s .18s var(--ease) both; }
+    @keyframes rise { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+    .festival-logo { position:absolute; top:30px; left:50%; width:min(76vw,430px); max-height:180px; object-fit:contain; filter:drop-shadow(0 8px 20px rgba(10,26,72,.35)); transform:translateX(-50%); }
+    .eyebrow { margin:24px 0 10px; color:var(--cyan); font-size:.66rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    .hero h1 { max-width:700px; margin:0 auto; font:400 clamp(3.25rem,15vw,8.5rem)/.83 Anton,sans-serif; letter-spacing:.02em; text-transform:uppercase; }
+    .hero h1 em { display:block; color:var(--cyan); font-style:normal; }
+    .hero-copy { max-width:440px; margin:20px auto 0; font-size:clamp(.77rem,2.5vw,1rem); font-weight:500; line-height:1.7; }
+    .scroll-cue { display:inline-grid; justify-items:center; gap:8px; margin-top:30px; color:var(--white); font-size:.58rem; font-weight:700; letter-spacing:.2em; text-decoration:none; text-transform:uppercase; }
+    .scroll-cue::after { width:9px; height:9px; border-right:2px solid var(--cyan); border-bottom:2px solid var(--cyan); content:""; transform:rotate(45deg); animation:bob 1.5s ease-in-out infinite; }
+    @keyframes bob { 50% { transform:translateY(5px) rotate(45deg); } }
+    .page { min-height:100svh; display:grid; align-items:center; padding:100px clamp(20px,6vw,92px) 68px; }
+    .page-inner { width:min(100%,1040px); margin:auto; }
+    .section-kicker { display:flex; align-items:center; gap:10px; margin-bottom:12px; color:var(--cyan); font-size:.65rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; }
+    .section-kicker::before { width:35px; height:2px; background:currentColor; content:""; }
+    .section-title { max-width:800px; margin-bottom:30px; color:var(--navy); font:400 clamp(2.65rem,10vw,6rem)/.88 Anton,sans-serif; letter-spacing:.015em; text-transform:uppercase; }
+    .section-title span { color:var(--cyan); }
+    .intro { max-width:560px; margin-bottom:36px; font-size:clamp(.82rem,2vw,1rem); line-height:1.8; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .festival-tags-section { padding:0 20px 68px; background:var(--white); text-align:center; }
+    .festival-tags { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:clamp(14px,5vw,32px); margin:0; padding:0 12px; font:400 clamp(2rem,7.5vw,4.5rem)/.95 Anton,sans-serif; letter-spacing:.015em; text-transform:uppercase; }
+    .festival-tags-primary { color:var(--navy); }
+    .festival-tags-secondary { color:var(--cyan); }
+    .schedule { min-height:auto; padding-top:clamp(58px,8vw,88px); padding-bottom:clamp(34px,5vw,56px); background:var(--white); }
+    .schedule .section-title { margin:0 auto clamp(42px,8vw,72px); color:var(--cyan); font:400 clamp(2.65rem,10vw,6rem)/.88 Anton,sans-serif; letter-spacing:.015em; text-align:center; text-transform:uppercase; }
+    .schedule-list { position:relative; display:grid; gap:0; max-width:760px; margin:auto; }
+    .schedule-list::before { position:absolute; top:28px; bottom:28px; left:50%; width:1px; background:rgba(34,53,106,.32); content:""; transform:translateX(-50%); }
+    .schedule-item { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr); align-items:center; min-height:112px; }
+    .schedule-time { grid-column:1; padding-right:20px; color:var(--navy); font-size:clamp(1rem,3.4vw,1.35rem); font-weight:500; line-height:1.15; text-align:right; transition:color .28s var(--ease),transform .28s var(--ease); }
+    .schedule-item.is-active .schedule-time { color:var(--cyan); font-weight:700; transform:translateX(-8px) scale(1.16); transform-origin:right center; }
+    .schedule-item h3 { grid-column:3; margin:0; padding-left:20px; color:var(--navy); font-size:clamp(.88rem,2.5vw,1.08rem); font-weight:500; letter-spacing:.01em; line-height:1.35; text-transform:none; transition:color .28s var(--ease),transform .28s var(--ease); }
+    .schedule-item.is-active h3 { color:var(--cyan); font-weight:700; transform:scale(1.08); transform-origin:left center; }
+    .photos { background:var(--white); }
+    .photo-shell { position:relative; min-height:min(64svh,620px); display:grid; place-items:center; padding:30px; overflow:hidden; background:var(--navy); color:var(--white); text-align:center; }
+    .photo-shell::before { position:absolute; inset:0; background:linear-gradient(130deg,rgba(34,53,106,.88),rgba(8,188,226,.36)),url('./unionboda.jpg') center/cover; content:""; }
+    .photo-shell > div { position:relative; z-index:1; }
+    .photo-shell h3 { margin-bottom:13px; font:400 clamp(2.5rem,9vw,5rem)/.9 Anton,sans-serif; text-transform:uppercase; }
+    .photo-shell p { max-width:430px; margin-bottom:24px; font-size:.82rem; line-height:1.7; }
+    .button { display:inline-block; min-height:46px; padding:15px 21px; border:1px solid var(--cyan); border-radius:999px; color:var(--white); background:var(--cyan); font-size:.66rem; font-weight:700; letter-spacing:.15em; text-decoration:none; text-transform:uppercase; transition:color .25s,background .25s,transform .25s; }
+    .button:hover,.button:focus-visible { color:var(--cyan); background:var(--white); transform:translateY(-2px); }
+    .footer { padding:30px 20px max(30px,env(safe-area-inset-bottom)); color:var(--white); background:#172956; text-align:center; }
+    .footer img { width:52px; height:52px; margin-bottom:12px; object-fit:contain; }
+    .footer p { margin:0; font-size:.58rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+    :focus-visible { outline:3px solid var(--cyan); outline-offset:4px; }
+    @media (min-width:700px) {
+      /* Keep the scroll cue in its original lower-centre position. */
+      .hero { place-items:end center; padding:80px 7vw max(42px,env(safe-area-inset-bottom)); }
+      .hero-content { display:flex; flex-direction:column; align-items:center; text-align:center; }
+      .festival-logo { width:min(42vw,430px); }
+      .hero h1,.hero-copy { margin-left:auto; margin-right:auto; }
+      .scroll-cue { margin:8px auto 0; }
+    }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <img class="festival-logo" src="./regional%20festival%20logo.png" alt="Union Regional Festival">
+        <p class="eyebrow">Union Regional Festival</p>
+        <h1>One Union <em>One Festival</em></h1>
+        <p class="hero-copy">Celebrating our regions, our people and the music that brings us together.</p>
+        <a class="scroll-cue" href="#schedule">Scroll</a>
+      </div>
+    </section>
+    <section class="page schedule" id="schedule" aria-labelledby="scheduleTitle">
+      <div class="page-inner">
+        <h2 class="section-title" id="scheduleTitle">Schedule</h2>
+        <div class="schedule-list">
+          <article class="schedule-item"><time class="schedule-time">3:00pm</time><h3>Guest Arrival<br>Reception & Ushering</h3></article>
+          <article class="schedule-item"><time class="schedule-time">3:30pm</time><h3>MC Welcome<br>& Audience Engagement</h3></article>
+          <article class="schedule-item"><time class="schedule-time">3:40pm</time><h3>Opening<br>Prayer</h3></article>
+          <article class="schedule-item"><time class="schedule-time">3:45pm</time><h3>National<br>Anthem</h3></article>
+          <article class="schedule-item"><time class="schedule-time">3:50pm</time><h3>Union Profile Video<br>"This is How Far we Have Come"</h3></article>
+          <article class="schedule-item"><time class="schedule-time">4:00pm</time><h3>Welcome Remarks<br>Union CEO Greetings from Union Chairpersons</h3></article>
+          <article class="schedule-item"><time class="schedule-time">4:30pm</time><h3>Music Interlude<br>Invited Artists</h3></article>
+          <article class="schedule-item"><time class="schedule-time">4:45pm</time><h3>Musician Remarks<br>from Grace Nakimera</h3></article>
+          <article class="schedule-item"><time class="schedule-time">4:55pm</time><h3>Announcement of key Musicians<br>& Selection of Musicians for each Region</h3></article>
+          <article class="schedule-item"><time class="schedule-time">5:50pm</time><h3>Speech from <br>Chief Guest</h3></article>
+          <article class="schedule-item"><time class="schedule-time">6:20pm</time><h3>Chief Guest & M.D<br> Festival flag-off</h3></article>
+          <article class="schedule-item"><time class="schedule-time">6:30pm</time><h3>Music Interlude<br>Invited Artists</h3></article>
+           <article class="schedule-item"><time class="schedule-time">6:50pm</time><h3>Closing Remarks</h3></article>
+          <article class="schedule-item"><time class="schedule-time">7:00pm</time><h3>Refreshments & Ssuuna Ben<br>Ebinyaanyanyaanya Show</h3></article>
+        </div>
+      </div>
+    </section>
+    <section class="page photos" id="photos" aria-labelledby="photosTitle">
+      <div class="page-inner">
+        <p class="section-kicker">Keep the memories</p>
+        <h2 class="section-title" id="photosTitle">Festival <span>photos</span></h2>
+        <div class="photo-shell"><div><h3>Moments<br>in motion</h3>
+          <a class="button" href="https://drive.google.com/drive/folders/1r0lBHB5t6grol3BiIU1wCbMouaXEBq83?usp=sharing" target="_blank" rel="noopener noreferrer">View Photos</a></div></div>
+      </div>
+    </section>
+    <section class="festival-tags-section" aria-label="Festival hashtags">
+      <p class="festival-tags"><span class="festival-tags-primary">#Twegateko</span><span class="festival-tags-secondary">#URFestival</span></p>
+    </section>
+  </main>
+  <footer class="footer"><img src="./Union_logo_reversed.png" alt="Union logo"></footer>
+  <script>
+    const scheduleList=document.querySelector('.schedule-list');
+    let scheduleFrame;
+    const updateScheduleMarker=()=>{
+      scheduleFrame=undefined;
+      const items=[...scheduleList.querySelectorAll('.schedule-item')];
+      const first=items[0],last=items.at(-1),listRect=scheduleList.getBoundingClientRect();
+      const progress=Math.min(1,Math.max(0,(innerHeight*.7-listRect.top)/scheduleList.offsetHeight));
+      const activeIndex=Math.round(progress*(items.length-1));
+      items.forEach((item,index)=>item.classList.toggle('is-active',index===activeIndex));
+    };
+    const requestScheduleMarker=()=>{if(!scheduleFrame)scheduleFrame=requestAnimationFrame(updateScheduleMarker);};
+    requestScheduleMarker();
+    addEventListener('scroll',requestScheduleMarker,{passive:true});
+    addEventListener('resize',requestScheduleMarker);
+  </script>
+</body>
+</html>
