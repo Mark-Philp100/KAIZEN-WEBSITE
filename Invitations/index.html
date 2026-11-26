@@ -57,7 +57,7 @@
     .festival-tags-secondary { color:var(--cyan); }
     .schedule { min-height:auto; padding-top:clamp(58px,8vw,88px); padding-bottom:clamp(34px,5vw,56px); background:var(--white); }
     .schedule .section-title { margin:0 auto clamp(42px,8vw,72px); color:var(--cyan); font:400 clamp(2.65rem,10vw,6rem)/.88 Anton,sans-serif; letter-spacing:.015em; text-align:center; text-transform:uppercase; }
-    .schedule-list { position:relative; display:grid; gap:0; width:100%; max-width:620px; margin:auto; }
+    .schedule-list { position:relative; display:grid; gap:0; width:100%; max-width:520px; margin:auto; }
     .schedule-list::before { position:absolute; top:28px; bottom:28px; left:50%; width:1px; background:rgba(34,53,106,.32); content:""; transform:translateX(-50%); }
     .schedule-item { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr); align-items:center; min-height:92px; }
     .schedule-time { grid-column:1; padding-right:20px; color:var(--navy); font-size:clamp(1rem,3.4vw,1.35rem); font-weight:500; line-height:1.15; text-align:right; transition:color .28s var(--ease),transform .28s var(--ease); }
@@ -85,6 +85,7 @@
       .page { min-height:auto; padding:68px 20px 44px; }
       .schedule { padding-top:50px; padding-bottom:32px; }
       .schedule .section-title { margin-bottom:32px; font-size:clamp(2.4rem,11vw,3.4rem); }
+      .schedule-list { max-width:420px; }
       .schedule-list::before { left:50%; }
       .schedule-item { grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr); column-gap:0; min-height:0; align-items:center; padding:10px 0; }
       .schedule-time { grid-column:1; padding:0 8px 0 0; font-size:.82rem; text-align:right; white-space:nowrap; }
