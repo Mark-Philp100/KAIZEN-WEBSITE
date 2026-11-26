@@ -32,6 +32,7 @@ deployment:
     - /bin/mkdir -p $DEPLOYPATH/Invitations
     - /bin/cp Invitations/index.html $DEPLOYPATH/Invitations/
     - /bin/cp "Invitations/regional festival logo.png" $DEPLOYPATH/Invitations/
+    - /bin/cp Invitations/regional-festival-logo.webp $DEPLOYPATH/Invitations/
     - /bin/cp Invitations/union-festival-hero.webp $DEPLOYPATH/Invitations/
     - /bin/cp Invitations/unionboda.jpg $DEPLOYPATH/Invitations/
     - /bin/cp Invitations/Union_logo_reversed.png $DEPLOYPATH/Invitations/
