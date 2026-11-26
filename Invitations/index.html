@@ -85,13 +85,13 @@
       .page { min-height:auto; padding:68px 20px 44px; }
       .schedule { padding-top:50px; padding-bottom:32px; }
       .schedule .section-title { margin-bottom:32px; font-size:clamp(2.4rem,11vw,3.4rem); }
-      .schedule-list::before { left:38px; }
-      .schedule-item { grid-template-columns:minmax(0,1fr); min-height:0; gap:4px; align-items:start; padding:13px 0 13px 82px; }
-      .schedule-time { grid-column:1; padding:0; font-size:1rem; text-align:left; }
+      .schedule-list::before { left:50%; }
+      .schedule-item { grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr); column-gap:0; min-height:0; align-items:center; padding:10px 0; }
+      .schedule-time { grid-column:1; padding:0 8px 0 0; font-size:.82rem; text-align:right; white-space:nowrap; }
       .schedule-item.is-active .schedule-time { transform:none; }
-      .schedule-item h3 { grid-column:1; padding:0; font-size:.92rem; line-height:1.45; }
+      .schedule-item h3 { grid-column:3; padding:0 0 0 8px; font-size:.86rem; line-height:1.35; }
       .schedule-item.is-active h3 { transform:none; }
-      .schedule-logo-button { left:38px; width:68px; height:44px; }
+      .schedule-logo-button { left:50%; width:68px; height:44px; }
       .photos.page { min-height:auto; padding:56px 20px 40px; }
       .photo-shell { min-height:min(56svh,440px); padding:24px 18px; }
       .photo-shell h3 { font-size:clamp(2.25rem,10vw,3.2rem); }
@@ -101,9 +101,8 @@
       .footer { padding:24px 20px max(24px,env(safe-area-inset-bottom)); }
     }
     @media (max-width:360px) {
-      .schedule-list::before { left:32px; }
-      .schedule-item { padding-left:74px; }
-      .schedule-logo-button { left:32px; width:62px; height:40px; }
+      .schedule-item { grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr); }
+      .schedule-logo-button { width:62px; height:40px; }
     }
     @media (min-width:700px) {
       /* Keep the scroll cue in its original lower-centre position. */
